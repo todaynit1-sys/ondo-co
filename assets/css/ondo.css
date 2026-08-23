@@ -1141,56 +1141,60 @@ body.t-ai .form input:focus,body.t-ai .form textarea:focus{border-color:var(--ai
 .bp-list i{display:block;font-style:normal;font-size:13px;font-weight:600;color:var(--sv-d);margin-top:2px}
 
 /* ══════════════════════════════════════════════════════
-   26. 실제 작업물 카드
+   26. 실제 작업물 카드 — 웹 미리보기 이미지
    ══════════════════════════════════════════════════════ */
 .pfs{display:grid;gap:16px;margin-top:44px}
 @media (min-width:700px){.pfs{grid-template-columns:repeat(2,1fr)}}
 @media (min-width:1040px){.pfs{grid-template-columns:repeat(3,1fr)}}
 
 .pf{
-  --mood:var(--web);--mood-2:#6D99FF;
+  --mood:var(--web);
   display:flex;flex-direction:column;
   background:var(--paper);border:1px solid var(--line);border-radius:var(--r2);
   overflow:hidden;box-shadow:var(--sh1);
   transition:transform .32s var(--ease),box-shadow .32s var(--ease),border-color .2s linear;
 }
 .pf:hover{transform:translateY(-5px);box-shadow:var(--sh3);border-color:var(--mood)}
-.pf-top{
-  position:relative;padding:22px 22px 20px;color:#fff;overflow:hidden;
-  background:linear-gradient(142deg,var(--mood-2),var(--mood) 78%);
-  min-height:132px;display:flex;flex-direction:column;justify-content:space-between;gap:14px;
+
+/* 브라우저 창처럼 보이는 미리보기 */
+.pf-shot{position:relative;background:var(--mist-2);border-bottom:1px solid var(--line);overflow:hidden}
+.pf-bar{
+  display:flex;align-items:center;gap:5px;
+  padding:9px 12px;background:var(--mist);border-bottom:1px solid var(--line);
 }
-.pf-top::after{
-  content:"";position:absolute;inset:0;pointer-events:none;
-  background:radial-gradient(120% 90% at 88% 8%,rgba(255,255,255,.28),transparent 60%);
-}
-.pf-url{
-  position:relative;z-index:1;display:inline-flex;align-items:center;gap:7px;align-self:flex-start;
-  font-family:var(--mono,ui-monospace,SFMono-Regular,Menlo,monospace);
-  font-size:11px;font-weight:600;letter-spacing:-.01em;
-  background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.3);
-  padding:5px 10px;border-radius:var(--rp);max-width:100%;
+.pf-bar i{width:7px;height:7px;border-radius:50%;background:var(--line-2);flex:none}
+.pf-bar span{
+  flex:1;margin-left:7px;min-width:0;
+  font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+  font-size:10.5px;color:var(--ink-3);
+  background:var(--paper);border:1px solid var(--line);border-radius:var(--rp);
+  padding:3px 9px;
   overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
 }
-.pf-url::before{content:"";width:6px;height:6px;border-radius:50%;background:#7CFFA8;flex:none}
-.pf-name{
-  position:relative;z-index:1;
-  font-family:var(--arch);font-variation-settings:"wdth" 110;
-  font-size:clamp(21px,2.6vw,25px);font-weight:800;letter-spacing:-.03em;line-height:1.14;
+.pf-shot img{
+  width:100%;height:auto;aspect-ratio:1000/512;object-fit:cover;object-position:top center;
+  display:block;background:var(--mist-2);
+  transition:transform .5s var(--ease);
 }
-.pf-name small{display:block;font-family:var(--sans);font-size:13px;font-weight:600;opacity:.86;margin-top:5px;letter-spacing:-.02em}
-.pf-body{padding:18px clamp(16px,2vw,20px) 20px;display:flex;flex-direction:column;gap:9px;flex:1}
+.pf:hover .pf-shot img{transform:scale(1.035)}
+.pf-shot::after{
+  content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:var(--mood);
+  transform:scaleX(0);transform-origin:0 50%;transition:transform .4s var(--ease);
+}
+.pf:hover .pf-shot::after{transform:scaleX(1)}
+
+.pf-body{padding:17px clamp(16px,2vw,20px) 19px;display:flex;flex-direction:column;gap:8px;flex:1}
 .pf-cat{
   font-family:var(--arch);font-size:10px;font-weight:800;letter-spacing:.15em;text-transform:uppercase;
   color:var(--mood);
 }
-.pf h3{font-size:17.5px;font-weight:800;letter-spacing:-.04em}
+.pf h3{font-size:18px;font-weight:800;letter-spacing:-.042em}
 .pf p{font-size:13.5px;color:var(--ink-2);line-height:1.72}
 .pf-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:2px}
 .pf-tags li{font-size:11.5px;font-weight:600;color:var(--ink-2);background:var(--mist);
   border:1px solid var(--line);padding:4px 9px;border-radius:var(--rp)}
 .pf-go{
-  margin-top:auto;padding-top:15px;
+  margin-top:auto;padding-top:14px;
   display:inline-flex;align-items:center;gap:6px;
   font-size:13.5px;font-weight:700;color:var(--mood);
 }

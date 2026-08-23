@@ -48,7 +48,7 @@ body = """
 
     <div class="svcs-wrap ld ld6">
       <div class="svcs-rail" aria-hidden="true"></div>
-      <p class="svcs-cap"><b>세 가지 중에, 지금 비어 있는 자리 하나부터</b><span>세 개 다 하실 필요 없습니다</span></p>
+      <p class="svcs-cap"><b>세 가지는 서로 다른 일입니다</b><span>필요한 것만 고르시면 됩니다</span></p>
 
       <div class="svcs">
         <a class="sc" data-svc="web" href="web/">
@@ -91,7 +91,7 @@ body = """
         </a>
       </div>
 
-      <p class="svcs-note">어느 쪽이 급한지 모르겠으면 업종이나 상황만 <a href="__K__" target="_blank" rel="noopener" style="color:var(--web);font-weight:700">카톡으로 알려 주세요</a>. 필요 없으면 필요 없다고 말씀드립니다.</p>
+      <p class="svcs-note">홈페이지만, 영상만, 결과물만 하셔도 됩니다. 어느 쪽인지 모르겠으면 상황만 <a href="__K__" target="_blank" rel="noopener" style="color:var(--web);font-weight:700">카톡으로 알려 주세요</a>. 필요 없으면 필요 없다고 말씀드립니다.</p>
     </div>
   </div>
 </section>
@@ -112,7 +112,7 @@ body = """
         <h3>지원할 회사는 정했는데, 보여줄 결과물이 없다</h3>
         <p>자격증과 학점은 다들 비슷합니다. 실제로 만들어서 돌아가는 것 하나가 면접의 화제를 바꿉니다.</p></div>
     </div>
-    <p class="spots-after rv">비어 있는 자리를 채우는 일.<br><em>온도컴퍼니의 세 서비스는 이 세 자리에 하나씩 대응합니다.</em></p>
+    <p class="spots-after rv">세 서비스는 이 세 자리에 하나씩 대응합니다.<br><em>필요한 자리 하나만 채우셔도 됩니다.</em></p>
   </div>
 </section>
 
@@ -187,11 +187,11 @@ body = """
 
 <section class="sec sec-mist" id="s-cmp">
   <div class="wrap">
-    <p class="eyebrow rv">Compare <span class="ko">뭐부터 해야 할까</span></p>
-    <h2 class="rv">세 개 다 하실 필요 없습니다</h2>
-    <p class="lede rv">지금 가장 비어 있는 자리 하나부터 채우시면 됩니다. 아래 표에서 본인에 해당하는 줄을 보세요.</p>
+    <p class="eyebrow rv">Compare <span class="ko">뭘 고를까</span></p>
+    <h2 class="rv">필요한 것만 고르시면 됩니다</h2>
+    <p class="lede rv">세 가지는 순서대로 밟는 단계가 아닙니다. 홈페이지만, 영상만, 결과물만 하셔도 됩니다. 아래에서 본인에 해당하는 칸을 보세요.</p>
     __CMP__
-    <p class="cmp-note rv">고민되시면 업종이나 상황만 카톡으로 알려 주세요. 뭐가 급한지 먼저 봐 드리고, 필요 없으면 필요 없다고 말씀드립니다.</p>
+    <p class="cmp-note rv">세 가지를 묶어서 파는 상품이 아닙니다. 하나만 하셔도 되고, 나중에 다른 걸 추가하셔도 됩니다. 고민되시면 상황만 카톡으로 알려 주세요.</p>
   </div>
 </section>
 
@@ -233,7 +233,7 @@ body = (body
     .replace("__CLIPS__", CLIPS)
     .replace("__AICARD__", AICARD)
     .replace("__CMP__", cmp_table())
-    .replace("__PFS__", "".join(pf(*x) for x in PORTFOLIO))
+    .replace("__PFS__", "".join(pf(P, *x) for x in PORTFOLIO))
     .replace("__STEPS__", steps([
         ("DAY 0", "문의 · 접수", "카톡으로 편하게 연락 주세요. 필요한 정보를 정리한 질문지를 보내 드립니다. 자료는 있는 그대로 보내주시면 됩니다."),
         ("DAY 1–2", "시안 확인", "실제로 작동하는 주소로 시안을 보내 드립니다. 캡처가 아니라 스마트폰에서 직접 눌러보실 수 있습니다."),
@@ -241,8 +241,8 @@ body = (body
         ("DAY 5", "배포 · 납품", "바로 쓸 수 있는 주소로 올려 드립니다. 소스 파일 전체와 함께, 나중에 수정 맡기는 방법도 안내해 드립니다."),
     ]))
     .replace("__FAQ__", faq([
-        ("세 가지 중에 뭐부터 해야 할까요?",
-         "검색했을 때 나올 자리가 없다면 <b>온도 웹</b>부터입니다. 홈페이지는 있는데 새 손님이 안 온다면 <b>온도 클립</b>, 가게가 아니라 본인 취업이나 이직이 목적이라면 <b>온도 AI</b>입니다. 고민되시면 상황만 카톡으로 알려 주세요."),
+        ("세 가지 중에 뭘 골라야 할까요?",
+         "순서가 정해져 있지 않습니다. <b>필요한 것만</b> 고르시면 됩니다. 검색했을 때 나올 자리가 필요하면 <b>온도 웹</b>, 영상으로 알리고 싶으면 <b>온도 클립</b>, 취업·이직에 쓸 결과물이 필요하면 <b>온도 AI</b>입니다. 세 개가 서로를 필요로 하지 않으니, 하나만 하셔도 아무 문제 없습니다."),
         ("사진도 없고 글도 못 쓰는데 괜찮을까요?",
          "괜찮습니다. 업종과 강점 세 가지만 말씀해 주시면 소개 문구 초안을 써서 먼저 보여 드립니다. 마음에 안 드시면 그대로 고쳐 드립니다. 사진이 없으면 무료 이미지로 채우고 나중에 실제 사진이 생기면 교체해 드립니다. 다만 숏폼은 가게 실물 영상이 있어야 만들 수 있습니다."),
         ("네이버나 구글 검색에 바로 나오나요?",

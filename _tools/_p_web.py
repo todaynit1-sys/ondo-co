@@ -125,8 +125,8 @@ body = """
 <section class="sec">
   <div class="wrap">
     <p class="eyebrow rv">Next <span class="ko">다른 서비스</span></p>
-    <h2 class="rv">홈페이지 다음에 필요한 것</h2>
-    <p class="lede rv">주소가 생겼으면 그다음은 그 주소를 보게 만드는 일입니다.</p>
+    <h2 class="rv">홈페이지가 아니라 다른 게 필요하시면</h2>
+    <p class="lede rv">세 서비스는 각각 다른 일입니다. 홈페이지 없이 아래만 하셔도 됩니다.</p>
     __NEXTS__
   </div>
 </section>
@@ -151,7 +151,7 @@ body = (body
   .replace("__CRUMB__", crumb(P, [(None, "온도 웹")]))
   .replace("__K__", K)
   .replace("__PHONE__", PHONE_WEB)
-  .replace("__PFS_WEB__", "".join(pf(*x) for x in PORTFOLIO if x[-1] == "web"))
+  .replace("__PFS_WEB__", "".join(pf(P, *x) for x in PORTFOLIO if x[-2] == "web"))
   .replace("__WORKS__", "".join(work(*w) for w in WEB_WORKS))
   .replace("__PLANS__", PLANS)
   .replace("__NEXTS__", nexts(P, "web"))

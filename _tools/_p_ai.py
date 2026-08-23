@@ -77,10 +77,14 @@ body = """
 
 <section class="sec sec-mist">
   <div class="wrap">
-    <p class="eyebrow rv">Work <span class="ko">결과물 예시</span></p>
+    <p class="eyebrow rv">Work <span class="ko">실제 결과물</span></p>
     <h2 class="rv">이런 게 나옵니다</h2>
-    <p class="lede rv">설명보다 직접 눌러 보시는 게 빠릅니다. 실제로 배포되어 지금 열리는 결과물입니다.</p>
-    <div class="pfs" style="max-width:420px">__PFS_AI__</div>
+    <p class="lede rv">설명보다 직접 눌러 보시는 게 빠릅니다. 아래는 바이브코딩으로 만들어 실제로 배포한 웹앱입니다.</p>
+    <div class="pfs">__PFS_AI__</div>
+    <p class="cmp-note rv" style="margin-top:24px">
+      두 개 모두 화면 여러 개와 외부 데이터 연동이 들어간 결과물입니다. 이 정도가 이력서에 링크로 들어갑니다.
+      <a href="../work/" style="color:var(--sv);font-weight:700">작업물 전체 보기 →</a>
+    </p>
   </div>
 </section>
 
@@ -152,7 +156,8 @@ body = """
 <section class="sec sec-mist">
   <div class="wrap">
     <p class="eyebrow rv">Next <span class="ko">다른 서비스</span></p>
-    <h2 class="rv">가게가 목적이라면 이쪽입니다</h2>
+    <h2 class="rv">취업이 아니라 다른 게 필요하시면</h2>
+    <p class="lede rv">세 서비스는 각각 다른 일입니다. 가게를 알리는 쪽은 아래입니다.</p>
     __NEXTS__
   </div>
 </section>
@@ -217,7 +222,7 @@ TRACK = """<div class="track">
 body = (body
   .replace("__CRUMB__", crumb(P, [(None, "온도 AI")]))
   .replace("__TRACK__", TRACK)
-  .replace("__PFS_AI__", "".join(pf(*x) for x in PORTFOLIO if x[-1] == "ai"))
+  .replace("__PFS_AI__", "".join(pf(P, *x) for x in PORTFOLIO if x[-2] == "ai"))
   .replace("__AICARD__", AICARD)
   .replace("__NEXTS__", nexts(P, "ai"))
   .replace("__STEPS__", steps([

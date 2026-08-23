@@ -51,7 +51,7 @@ body = """
 """
 body = (body
   .replace("__CRUMB__", crumb(P, [(None, "작업물")]))
-  .replace("__PFS__", "".join(pf(*x) for x in PORTFOLIO))
+  .replace("__PFS__", "".join(pf(P, *x) for x in PORTFOLIO))
   .replace("__WORKS__", "".join(work(*w) for w in allworks)))
 body += band(P, "이런 걸 원하셨나요?", "비슷한 느낌으로 원하시는 게 있으면 그 이야기부터 하시면 됩니다. 상담과 견적은 무료입니다.")
 

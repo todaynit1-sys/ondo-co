@@ -117,7 +117,7 @@ def cmp_table():
         <tbody>
           <tr><th scope="row">이런 분께</th>
             <td>검색했을 때 나올 자리가 <b>아예 없는</b> 사장님</td>
-            <td>홈페이지는 있는데 <b>새 손님이 안 오는</b> 사장님</td>
+            <td>영상으로 <b>가게를 알리고 싶은</b> 사장님</td>
             <td>이력서에 쓸 <b>결과물이 없는</b> 취업·이직 준비생</td></tr>
           <tr><th scope="row">받으시는 것</th>
             <td>바로 쓸 수 있는 <b>웹 주소</b> + 소스 전체</td>
@@ -125,10 +125,10 @@ def cmp_table():
             <td>작동하는 <b>웹앱 주소</b> + 소스 + 설명 자료</td></tr>
           <tr><th scope="row">기간</th><td>3~5일</td><td>2~3일</td><td>4~10일</td></tr>
           <tr><th scope="row">시작 가격</th><td><b>5만원~</b></td><td><b>20만원</b> <small>편당</small></td><td><b>8만원~</b></td></tr>
-          <tr><th scope="row">가장 먼저</th>
-            <td>여기부터. 나머지가 다 여기로 연결됩니다</td>
-            <td>웹이 있는 다음</td>
-            <td>가게가 아니라 <b>본인</b>이 목적이면 이것만</td></tr>
+          <tr><th scope="row">준비해 주실 것</th>
+            <td>가게 사진, 소개 문구, 연락처</td>
+            <td>찍어둔 사진·영상</td>
+            <td>지원할 직무나 공고</td></tr>
         </tbody>
       </table>
     </div>"""
@@ -161,46 +161,64 @@ def plan(name, forwho, price, unit, items, cta, href, best=False, tag=None):
 
 
 # ══════════════════════════════════════════════════════
-# 실제 작업물 (배포된 사이트)
+# 실제 작업물 (배포된 사이트) — 미리보기 이미지 포함
+#   이미지: images/work/<slug>.webp  (실제 사이트 첫 화면 캡처)
 # ══════════════════════════════════════════════════════
-def pf(mood, mood2, url, host, name, sub, cat, h3, desc, tags, tag):
+def pf(P, slug, mood, url, host, name, cat, desc, tags, tag, alt):
     li = "".join('<li>' + t + '</li>' for t in tags)
     return ('<a class="pf rv" data-svc-tag="' + tag + '" href="' + url + '" target="_blank" rel="noopener"'
-            ' style="--mood:' + mood + ';--mood-2:' + mood2 + '">\n'
-            '  <div class="pf-top">\n'
-            '    <span class="pf-url">' + host + '</span>\n'
-            '    <span class="pf-name">' + name + '<small>' + sub + '</small></span>\n'
+            ' style="--mood:' + mood + '">\n'
+            '  <div class="pf-shot">\n'
+            '    <div class="pf-bar"><i></i><i></i><i></i><span>' + host + '</span></div>\n'
+            '    <img src="' + P + 'images/work/' + slug + '.webp" alt="' + alt + '"'
+            ' width="1000" height="512" loading="lazy" decoding="async">\n'
             '  </div>\n'
             '  <div class="pf-body">\n'
             '    <p class="pf-cat">' + cat + '</p>\n'
-            '    <h3>' + h3 + '</h3>\n'
+            '    <h3>' + name + '</h3>\n'
             '    <p>' + desc + '</p>\n'
             '    <ul class="pf-tags">' + li + '</ul>\n'
             '    <span class="pf-go">사이트 열기 →</span>\n'
             '  </div>\n</a>')
 
 PORTFOLIO = [
-    ("#0E5FD8", "#4E90FF",
+    ("safeclean", "#1B5BFF",
      "https://safeclean.ondoco.workers.dev/", "safeclean.ondoco.workers.dev",
-     "SAFECLEAN", "세이프클린ENG",
-     "Ondo Web · 시공 · 설비", "강화유리문 수리 전문 업체 사이트",
+     "세이프클린ENG", "Ondo Web · 시공 · 설비",
      "강화유리문·자동문·현관문 수리와 출입통제 시공을 다루는 업체 사이트입니다. "
-     "고장 증상으로 먼저 진단하게 하고, 시공사례를 모아 보여 준 뒤 문의로 이어지도록 순서를 잡았습니다.",
-     ["반응형", "시공사례 갤러리", "증상별 진단", "서비스 지역", "전화·문의"], "web"),
+     "첫 화면에 전화번호를 붙여 두고, 고장 증상으로 먼저 진단하게 한 뒤 시공사례로 이어지도록 순서를 잡았습니다.",
+     ["반응형", "시공사례 갤러리", "증상별 진단", "전화 바로걸기", "네이버 지도"], "web",
+     "세이프클린ENG 사이트 첫 화면 — 강화유리문·자동문 수리 소개와 전화 상담 버튼"),
 
-    ("#0E9AA7", "#3FD0DC",
+    ("gaemyo", "#E0778F",
      "https://gaemyo-travel.vercel.app/", "gaemyo-travel.vercel.app",
-     "GAEMYO", "개묘한여행",
-     "Ondo Web · 개인 브랜딩", "여행 채널 소개 사이트",
-     "세계여행을 준비하는 유튜브 채널의 소개 페이지입니다. "
-     "채널의 캐릭터 설정을 먼저 보여 주고, 영상과 SNS로 자연스럽게 넘어가도록 구성했습니다.",
-     ["반응형", "유튜브 임베드", "캐릭터 소개", "SNS 연결"], "web"),
+     "개묘한여행", "Ondo Web · 개인 브랜딩",
+     "세계여행을 시작한 개묘부부의 채널 소개 페이지입니다. "
+     "손글씨 서체와 파스텔 톤으로 두 캐릭터를 먼저 보여 주고, 인스타그램으로 자연스럽게 넘어가도록 구성했습니다.",
+     ["반응형", "캐릭터 소개", "SNS 연결", "손글씨 톤"], "web",
+     "개묘한여행 사이트 첫 화면 — 채널 이름과 두 캐릭터 소개"),
 
-    ("#D9540C", "#FF9040",
-     "https://career-lab.ondo-co.workers.dev/", "career-lab.ondo-co.workers.dev",
-     "CAREER LAB", "커리어 랩",
-     "Ondo AI · 취업용 결과물", "커리어 준비용 웹앱",
-     "온도컴퍼니가 만든 커리어 준비용 웹앱입니다. "
-     "온도 AI로 어떤 결과물이 나오는지 직접 눌러 보실 수 있는 예시입니다.",
-     ["웹앱", "배포 완료", "온도 AI 결과물"], "ai"),
+    ("career-lab", "#2C3D63",
+     "https://career-lab.ondoco.workers.dev/", "career-lab.ondoco.workers.dev",
+     "커리어전략연구소", "Ondo Web · 전문가 브랜딩",
+     "커리어 상담 데이터를 이론으로 정리해 온 연구소 사이트입니다. "
+     "네이비와 금색으로 신뢰감을 먼저 세우고, 연구 분야와 소장 소개를 지나 자문 의뢰까지 한 흐름으로 이어집니다.",
+     ["반응형", "연구 분야", "아카이브", "자가진단 도구", "자문 의뢰"], "web",
+     "커리어전략연구소 사이트 첫 화면 — 커리어에도 전략이 필요합니다 문구와 소개 버튼"),
+
+    ("ziggle-stock", "#4F46E5",
+     "https://ziggle-stock.vercel.app/", "ziggle-stock.vercel.app",
+     "지글의 주린이 가이드", "Ondo AI · 취업용 결과물",
+     "배당·적립 투자를 직접 계산해 보는 웹앱입니다. 종목을 넣고 초기 투자금과 월 적립금을 입력하면 "
+     "결과·비교·세금까지 화면을 나눠 보여 줍니다. 바이브코딩으로 만든 실사용 도구입니다.",
+     ["웹앱", "입력 → 결과 계산", "종목 비교", "탭 구조", "모바일 우선"], "ai",
+     "지글의 주린이 가이드 앱 화면 — 계산 모드 선택과 종목 추가, 포트폴리오 입력 화면"),
+
+    ("ziggle-3x", "#6E56F8",
+     "https://ziggle-3x.vercel.app/", "ziggle-3x.vercel.app",
+     "지글의 그물망 매매법", "Ondo AI · 취업용 결과물",
+     "특정 종목 하나를 위한 전략 대시보드입니다. 실시간 시세를 불러와 파라미터를 바꿔 보고, "
+     "백테스트 화면에서 결과를 확인합니다. 외부 데이터 연동까지 들어간 결과물 예시입니다.",
+     ["웹앱", "실시간 시세 연동", "파라미터 시뮬레이터", "백테스트", "다크 대시보드"], "ai",
+     "지글의 그물망 매매법 대시보드 화면 — 계좌 정보 입력과 전략 파라미터 튜닝 패널"),
 ]
