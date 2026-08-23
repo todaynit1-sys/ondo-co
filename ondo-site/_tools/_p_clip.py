@@ -1,0 +1,180 @@
+# -*- coding: utf-8 -*-
+from _build import *
+from _frag import *
+K = KAKAO
+P = "../"
+
+body = """
+<section class="phead">
+  <div class="wrap phead-in">
+    __CRUMB__
+    <p class="eyebrow rv">Service 02 <span class="ko">피드에 보이게</span></p>
+    <h1><span class="en">Ondo Clip</span>찾아온 손님이 아니라,<br>지나가던 손님을 잡습니다.</h1>
+    <p class="phead-lede">릴스와 쇼츠는 <b>검색하지 않은 사람</b>에게 닿는 유일한 통로입니다.
+      찍어둔 사진·영상만 보내주시면 편집·자막·음악까지 끝내서 드립니다.</p>
+    <dl class="phead-facts">
+      <div class="phead-fact"><dt>편당 가격</dt><dd>20<small>만원</small></dd></div>
+      <div class="phead-fact"><dt>제작 기간</dt><dd>2~3<small>일</small></dd></div>
+      <div class="phead-fact"><dt>기준 길이</dt><dd>30<small>초</small></dd></div>
+      <div class="phead-fact"><dt>규격</dt><dd>9:16<small>세로</small></dd></div>
+    </dl>
+    <div class="phead-btns">
+      <a class="btn btn-kko btn-lg" href="__K__" target="_blank" rel="noopener">카카오톡으로 상담하기</a>
+      <a class="btn btn-line btn-lg" href="#price">요금 보기</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <p class="eyebrow rv">Why <span class="ko">왜 숏폼인가</span></p>
+    <h2 class="rv">검색은 이미 아는 사람만 합니다</h2>
+    <p class="lede rv">우리 가게를 모르는 사람은 검색창에 우리 이름을 치지 않습니다. 그 사람에게 닿으려면, 그 사람이 넘기고 있던 화면에 우리가 끼어들어야 합니다.</p>
+    <div class="spots">
+      <div class="spot rv"><span class="spot-k">노출</span>
+        <h3>팔로워가 없어도 노출된다</h3>
+        <p>릴스·쇼츠는 팔로워가 아니라 관심사 기준으로 퍼집니다. 계정을 막 시작해도 시작할 수 있습니다.</p></div>
+      <div class="spot rv"><span class="spot-k">전환</span>
+        <h3>영상 아래에 연락할 곳만 있으면 된다</h3>
+        <p>영상으로 관심이 생긴 사람이 바로 갈 곳이 필요합니다. 프로필의 카톡·DM으로도 충분하고, 홈페이지가 있으면 그걸 걸어 드립니다.</p></div>
+      <div class="spot rv"><span class="spot-k">부담</span>
+        <h3>찍는 것까지는 하는데 편집에서 멈춘다</h3>
+        <p>대부분 이 지점에서 포기합니다. 찍어두신 것만 보내 주시면 편집은 저희가 끝냅니다.</p></div>
+    </div>
+    <p class="cmp-note rv" style="margin-top:26px">과장하지 않겠습니다. 숏폼 한 편으로 손님이 몰리지는 않습니다. 꾸준히 올렸을 때 확률이 올라가는 방식이라, 그래서 월 관리 상품을 따로 두었습니다.</p>
+  </div>
+</section>
+
+<section class="sec sec-mist svc" id="what">
+  <div class="wrap svc-grid">
+    <div>
+      <p class="eyebrow rv">What you get <span class="ko">받으시는 것</span></p>
+      <h2 class="rv">보내주신 소재로<br>올릴 수 있는 상태까지</h2>
+      <p class="svc-desc rv">편집본만 던져 드리지 않습니다. 어떤 순서로 올리면 좋을지, 첫 문장은 뭐라고 쓸지까지 같이 드립니다.</p>
+      <ul class="svc-list rv">
+        <li><span><b>30초 기준 세로 영상</b> — 릴스·쇼츠·틱톡 규격 동시 출력</span></li>
+        <li><span><b>자막 + 스타일</b> — 소리 없이 봐도 내용이 전달되게</span></li>
+        <li><span><b>저작권 안전한 배경음</b> — 상업적 사용이 허용된 음원만 사용</span></li>
+        <li><span><b>썸네일 1컷</b> — 프로필 그리드에서 보이는 첫 화면</span></li>
+        <li><span><b>업로드 문구 제안</b> — 첫 줄과 해시태그 초안</span></li>
+        <li><span><b>원본 파일 제공</b> — 나중에 직접 재편집하셔도 됩니다</span></li>
+      </ul>
+      <div class="svc-cta rv">
+        <span class="svc-price">편당 20만원<small>2~3일</small></span>
+        <a class="btn btn-sv" href="__K__" target="_blank" rel="noopener">카톡으로 상담하기</a>
+      </div>
+    </div>
+    __CLIPS__
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <p class="eyebrow rv">Need <span class="ko">준비해 주실 것</span></p>
+    <h2 class="rv">스마트폰으로 찍은 것이면 충분합니다</h2>
+    <p class="lede rv">장비를 새로 사실 필요 없습니다. 다만 아래 세 가지만 지켜서 찍어 주시면 결과가 확 달라집니다.</p>
+    <div class="curri">
+      <div class="cu rv"><span class="cu-n">01</span><div><h3>가로가 아니라 세로로</h3><p>세로로 찍어야 화면을 꽉 채웁니다. 가로 영상은 위아래가 잘리거나 여백이 생깁니다.</p></div></div>
+      <div class="cu rv"><span class="cu-n">02</span><div><h3>한 장면을 5초 이상</h3><p>너무 짧게 끊어 찍으면 쓸 구간이 없습니다. 흔들려도 되니 길게 찍어 주세요.</p></div></div>
+      <div class="cu rv"><span class="cu-n">03</span><div><h3>밝은 시간에</h3><p>조명보다 자연광이 낫습니다. 낮에 창가 쪽에서 찍은 화면이 가장 잘 나옵니다.</p></div></div>
+      <div class="cu rv"><span class="cu-n">04</span><div><h3>사진만 있어도 됩니다</h3><p>영상이 없으면 사진 8~12장으로도 만듭니다. 이 경우 구성이 조금 달라집니다.</p></div></div>
+    </div>
+    <div class="note-box rv"><b>안 되는 것</b> · 다른 채널의 영상·음원·폰트를 가져다 쓰지 않습니다. 저작권 문제가 사장님께 돌아가기 때문입니다. 유행하는 음원을 쓰고 싶으시면 업로드하실 때 앱 안에서 직접 붙이시는 방법을 알려 드립니다.</div>
+  </div>
+</section>
+
+<section class="sec sec-mist" id="price">
+  <div class="wrap">
+    <p class="eyebrow rv">Price <span class="ko">부가세 별도</span></p>
+    <h2 class="rv">한 편 단위로 계산합니다</h2>
+    <p class="lede rv">기준은 <b>30초 한 편</b>입니다. 기획·촬영 구성·편집·자막·썸네일이 모두 포함된 금액이고, 여러 편을 함께 하시면 편당 금액이 내려갑니다.</p>
+    <div class="plans" style="margin-top:38px">__PLANS__</div>
+    <div class="plan-note rv">
+      <b>길이</b> · 기준은 30초입니다. 더 길게 필요하시면 30초당 20만원 기준으로 협의합니다<br>
+      <b>수정</b> · 편당 1회 포함. 그 이후는 내용에 따라 별도 협의합니다<br>
+      <b>촬영</b> · 현장 촬영은 포함되지 않습니다. 보내주신 소재로 편집합니다<br>
+      <b>묶음</b> · 온도 웹과 함께 하시면 클립 금액에서 10% 할인해 드립니다<br>
+      <b>해지</b> · 월 관리는 월 단위로 해지하실 수 있습니다. 위약금이 없습니다
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <p class="eyebrow rv">Process <span class="ko">문의부터 납품까지</span></p>
+    <h2 class="rv">보내주시면 이틀 안에 초안이 갑니다</h2>
+    __STEPS__
+  </div>
+</section>
+
+<section class="sec sec-mist">
+  <div class="wrap">
+    <p class="eyebrow rv">FAQ <span class="ko">온도 클립</span></p>
+    <h2 class="rv">숏폼 관련해 자주 묻는 것</h2>
+    __FAQ__
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <p class="eyebrow rv">Next <span class="ko">다른 서비스</span></p>
+    <h2 class="rv">숏폼이 아니라 다른 게 필요하시면</h2>
+    <p class="lede rv">세 서비스는 각각 다른 일입니다. 숏폼 없이 아래만 하셔도 됩니다.</p>
+    __NEXTS__
+  </div>
+</section>
+"""
+
+PLANS = "".join([
+ plan("싱글", "한 편 만들어 보고 정하시려면", "20", "만원 · 1편",
+      ["30초 세로 영상 1편", "구성 기획 · 컷 편집", "자막 · 저작권 안전 배경음", "썸네일 1컷", "업로드 문구 초안", "무료 수정 1회"],
+      "싱글 문의", K),
+ plan("패키지", "계정을 제대로 시작하려면", "54", "만원 · 3편",
+      ["30초 세로 영상 3편 (편당 18만원)", "싱글 구성 전부 포함", "3편 콘셉트 · 자막 스타일 통일", "업로드 순서 · 문구 제안", "편당 무료 수정 1회"],
+      "패키지 문의", K, best=True, tag="가장 많이 선택"),
+ plan("월 관리", "꾸준히 올려야 효과가 납니다", "68", "만원 · 월 4편",
+      ["매주 1편 · 월 4편 (편당 17만원)", "패키지 구성 전부 포함", "매달 촬영 주제 · 가이드 제공", "반응 보고 다음 편 조정", "월 단위 해지 가능"],
+      "월 관리 문의", K),
+])
+
+body = (body
+  .replace("__CRUMB__", crumb(P, [(None, "온도 클립")]))
+  .replace("__K__", K)
+  .replace("__CLIPS__", CLIPS)
+  .replace("__PLANS__", PLANS)
+  .replace("__NEXTS__", nexts(P, "clip"))
+  .replace("__STEPS__", steps([
+     ("DAY 0", "소재 전달", "카톡으로 찍어두신 사진·영상을 보내 주세요. 어떤 걸 알리고 싶은지 한 줄만 적어 주시면 됩니다."),
+     ("DAY 1", "구성 확인", "어떤 순서로 어떤 자막을 넣을지 구성안을 먼저 보여 드립니다. 여기서 방향을 잡습니다."),
+     ("DAY 2", "초안 확인", "편집본을 보내 드립니다. 자막 문구·컷 순서·음악 모두 바꿀 수 있습니다."),
+     ("DAY 3", "납품", "최종본과 썸네일, 업로드 문구를 함께 드립니다. 원본 파일도 같이 갑니다."),
+  ]))
+  .replace("__FAQ__", faq([
+     ("영상 찍는 것도 해주시나요?",
+      "현장 촬영은 포함되어 있지 않습니다. 편집 전문 서비스라 <b>보내주신 소재로 만듭니다</b>. 대신 어떻게 찍으면 좋은지 촬영 가이드를 드리고, 월 관리 상품에서는 매달 촬영 주제까지 정해 드립니다."),
+     ("유행하는 음원을 써 주실 수 있나요?",
+      "저희가 편집 단계에서 넣어 드리지는 않습니다. 그 음원들은 대부분 상업적 사용 허가가 없어서 문제가 생기면 사장님 계정에 돌아갑니다. 대신 <b>업로드하실 때 앱 안에서 직접 붙이는 방법</b>을 알려 드립니다. 그 방법은 플랫폼이 허용하는 정상 경로입니다."),
+     ("조회수가 얼마나 나오나요?",
+      "보장할 수 없습니다. 조회수는 알고리즘과 업종, 올리는 시점에 따라 크게 달라지고, 한 편으로 결정되지도 않습니다. 확실하지 않은 것을 확실하다고 말씀드리지 않겠습니다. 저희가 책임지는 건 <b>올릴 수 있는 상태의 결과물</b>입니다."),
+     ("어떤 내용을 만들어야 할지 모르겠어요.",
+      "업종과 손님이 자주 묻는 질문 세 가지만 알려 주세요. 대부분 그 안에 소재가 있습니다. 시공은 전후 비교, 카페는 대표 메뉴, 학원은 수업 장면이 기본입니다."),
+     ("얼굴이 나오는 게 부담스러운데요.",
+      "괜찮습니다. 손과 작업 장면, 결과물, 가게 내부만으로도 충분히 만들 수 있습니다. 실제로 얼굴 없이 만드는 경우가 더 많습니다."),
+     ("영상 파일은 어떤 형식으로 주시나요?",
+      "MP4 파일로 드립니다. 인스타그램·유튜브 규격에 맞춘 세로 영상과 썸네일 이미지를 함께 보내 드립니다."),
+  ])))
+
+body += band(P, "찍어두신 것부터 보여 주세요", "쓸 수 있는 소재인지, 몇 편이 나올지 먼저 봐 드립니다. 확인과 견적은 무료입니다.", "clip")
+
+LD = {"@context": "https://schema.org", "@type": "Service", "name": "온도 클립",
+      "serviceType": "홍보 숏폼 영상 제작", "url": SITE + "clip/",
+      "provider": {"@type": "ProfessionalService", "name": "온도컴퍼니", "@id": SITE + "#org"},
+      "areaServed": {"@type": "Country", "name": "대한민국"},
+      "description": "소상공인 홍보용 30초 기준 세로 숏폼 영상 제작. 구성 기획·컷 편집·자막·저작권 안전 배경음·썸네일 포함, 릴스·쇼츠 규격으로 납품.",
+      "offers": {"@type": "AggregateOffer", "priceCurrency": "KRW", "lowPrice": "200000", "highPrice": "680000"}}
+
+page("clip/index.html",
+     "온도 클립 — 소상공인 홍보 숏폼 영상 제작 | 온도컴퍼니",
+     "찍어둔 사진·영상만 보내주시면 구성·편집·자막·배경음·썸네일까지 끝내서 드립니다. 30초 세로 규격 편당 20만원, 2~3일. 릴스·쇼츠 동시 출력.",
+     body, P, "clip/", ld=LD, theme="t-clip")
+print("clip/index.html")
