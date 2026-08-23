@@ -68,7 +68,7 @@ p{text-wrap:pretty}
    02. 골격
    ══════════════════════════════════════════════════════ */
 .wrap{width:100%;max-width:var(--maxw);margin-inline:auto;padding-inline:var(--pad)}
-.sec{padding-block:clamp(70px,9.5vw,124px)}
+.sec{padding-block:clamp(58px,6.6vw,88px)}
 .sec-mist{background:var(--mist)}
 section[id]{scroll-margin-top:80px}
 
@@ -85,9 +85,9 @@ section[id]{scroll-margin-top:80px}
 .eyebrow .ko{font-family:var(--sans);letter-spacing:-.01em;font-weight:600;text-transform:none;font-size:12.5px}
 
 h2{
-  font-size:clamp(27px,4.4vw,46px);
+  font-size:clamp(27px,4.4vw,44px);
   font-weight:800;line-height:1.26;letter-spacing:-.045em;
-  margin-bottom:16px;
+  margin-bottom:14px;
 }
 .lede{font-size:clamp(16px,1.9vw,19px);color:var(--ink-2);max-width:54ch;line-height:1.8}
 
@@ -191,7 +191,7 @@ h2{
 /* ══════════════════════════════════════════════════════
    05. 히어로
    ══════════════════════════════════════════════════════ */
-.hero{padding-block:clamp(48px,7vw,86px) clamp(56px,7vw,92px);position:relative;overflow:hidden}
+.hero{padding-block:clamp(26px,3vw,40px) clamp(42px,5vw,64px);position:relative;overflow:hidden}
 .hero::before{
   content:"";position:absolute;top:-320px;left:50%;transform:translateX(-50%);
   width:min(1200px,140vw);height:620px;pointer-events:none;
@@ -210,10 +210,10 @@ h2{
 }
 .hero-lede{font-size:clamp(16.5px,2.05vw,20px);line-height:1.75;color:var(--ink-2);max-width:44ch;margin-bottom:30px}
 .hero-lede b{color:var(--ink);font-weight:700}
-.hero-btns{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:clamp(34px,4.5vw,52px)}
+.hero-btns{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:clamp(28px,3.4vw,38px)}
 .hero-trust{
   display:flex;flex-wrap:wrap;align-items:center;gap:7px 18px;
-  margin-top:-18px;margin-bottom:clamp(34px,4.5vw,52px);
+  margin-top:-14px;margin-bottom:0;
   font-size:13.5px;color:var(--ink-3);font-weight:500;
 }
 .hero-trust span{display:inline-flex;align-items:center;gap:6px}
@@ -317,7 +317,7 @@ h2{
 /* ══════════════════════════════════════════════════════
    06. 문제 — 세 자리
    ══════════════════════════════════════════════════════ */
-.spots{margin-top:44px;display:grid;gap:13px}
+.spots{margin-top:34px;display:grid;gap:13px}
 @media (min-width:820px){.spots{grid-template-columns:repeat(3,1fr)}}
 .spot{
   --sv:var(--web);--sv-d:var(--web-d);--sv-t:var(--web-t);
@@ -336,7 +336,7 @@ h2{
 .spot h3{font-size:clamp(17px,2.2vw,19.5px);font-weight:700;letter-spacing:-.032em;line-height:1.5;margin-bottom:9px}
 .spot p{font-size:14.5px;color:var(--ink-2);line-height:1.75}
 .spots-after{
-  margin-top:34px;font-size:clamp(17px,2.5vw,23px);font-weight:800;letter-spacing:-.04em;line-height:1.55;
+  margin-top:28px;font-size:clamp(17px,2.5vw,23px);font-weight:800;letter-spacing:-.04em;line-height:1.55;
 }
 .spots-after em{
   font-style:normal;
@@ -472,7 +472,7 @@ h2{
 /* ══════════════════════════════════════════════════════
    09. 비교표
    ══════════════════════════════════════════════════════ */
-.cmp{margin-top:40px;overflow-x:auto;border:1px solid var(--line);border-radius:var(--r2);background:var(--paper);box-shadow:var(--sh1)}
+.cmp{margin-top:32px;overflow-x:auto;border:1px solid var(--line);border-radius:var(--r2);background:var(--paper);box-shadow:var(--sh1)}
 .cmp table{width:100%;min-width:660px;border-collapse:collapse;font-size:14.5px}
 .cmp th,.cmp td{padding:16px 18px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
 .cmp tr:last-child th,.cmp tr:last-child td{border-bottom:0}
@@ -492,7 +492,7 @@ h2{
 /* ══════════════════════════════════════════════════════
    10. 작업물
    ══════════════════════════════════════════════════════ */
-.works{margin-top:44px;display:grid;gap:16px}
+.works{margin-top:34px;display:grid;gap:16px}
 @media (min-width:680px){.works{grid-template-columns:repeat(2,1fr)}}
 @media (min-width:1060px){.works{grid-template-columns:repeat(4,1fr)}}
 .work{
@@ -534,7 +534,7 @@ h2{
 /* ══════════════════════════════════════════════════════
    11. 과정
    ══════════════════════════════════════════════════════ */
-.steps{margin-top:44px;display:grid;gap:14px;counter-reset:st}
+.steps{margin-top:34px;display:grid;gap:14px;counter-reset:st}
 @media (min-width:900px){.steps{grid-template-columns:repeat(4,1fr)}}
 .step{
   position:relative;counter-increment:st;
@@ -559,7 +559,7 @@ h2{
 /* ══════════════════════════════════════════════════════
    12. 요금
    ══════════════════════════════════════════════════════ */
-.ptabs{display:flex;gap:7px;margin:36px 0 22px;flex-wrap:wrap}
+.ptabs{display:flex;gap:7px;margin:28px 0 20px;flex-wrap:wrap}
 .ptab{
   padding:11px 19px;border-radius:var(--rp);border:1px solid var(--line-2);
   font-size:15px;font-weight:700;color:var(--ink-2);letter-spacing:-.025em;background:var(--paper);
@@ -616,7 +616,7 @@ h2{
 /* ══════════════════════════════════════════════════════
    13. FAQ
    ══════════════════════════════════════════════════════ */
-.faq{margin-top:36px;max-width:840px}
+.faq{margin-top:28px;max-width:840px}
 .faq details{
   border:1px solid var(--line);border-radius:var(--r1);background:var(--paper);
   margin-bottom:9px;transition:border-color .2s linear,box-shadow .25s var(--ease);
@@ -641,7 +641,7 @@ h2{
    14. 문의
    ══════════════════════════════════════════════════════ */
 .contact{background:linear-gradient(180deg,var(--paper),var(--mist) 40%)}
-.cgrid{margin-top:42px;display:grid;gap:clamp(26px,3.5vw,40px)}
+.cgrid{margin-top:34px;display:grid;gap:clamp(26px,3.5vw,40px)}
 @media (min-width:900px){.cgrid{grid-template-columns:.92fr 1.08fr;align-items:start}}
 
 .kko-card{
@@ -839,7 +839,7 @@ body.t-ai .form input:focus,body.t-ai .form textarea:focus{border-color:var(--ai
 .crumb i{font-style:normal;opacity:.55}
 .crumb b{color:var(--ink-2);font-weight:600}
 
-.phead{position:relative;overflow:hidden;padding-block:clamp(30px,4vw,44px) clamp(38px,5vw,60px);background:var(--mist)}
+.phead{position:relative;overflow:hidden;padding-block:clamp(24px,2.6vw,32px) clamp(32px,3.8vw,46px);background:var(--mist)}
 .phead::before{
   content:"";position:absolute;top:-360px;left:50%;transform:translateX(-50%);
   width:min(1100px,150vw);height:640px;pointer-events:none;
@@ -873,7 +873,7 @@ body.t-ai .form input:focus,body.t-ai .form textarea:focus{border-color:var(--ai
 /* ══════════════════════════════════════════════════════
    20. 멀티페이지 — 단계 트랙 (온도 AI 3단 구성)
    ══════════════════════════════════════════════════════ */
-.track{margin-top:44px;display:grid;gap:14px;counter-reset:tr}
+.track{margin-top:34px;display:grid;gap:14px;counter-reset:tr}
 @media (min-width:940px){.track{grid-template-columns:repeat(3,1fr)}}
 .tr{
   position:relative;counter-increment:tr;display:flex;flex-direction:column;
@@ -917,7 +917,7 @@ body.t-ai .form input:focus,body.t-ai .form textarea:focus{border-color:var(--ai
 /* ══════════════════════════════════════════════════════
    21. 멀티페이지 — 커리큘럼 · 결과물 목록
    ══════════════════════════════════════════════════════ */
-.curri{margin-top:40px;display:grid;gap:12px}
+.curri{margin-top:32px;display:grid;gap:12px}
 @media (min-width:760px){.curri{grid-template-columns:repeat(2,1fr)}}
 .cu{
   display:grid;grid-template-columns:auto 1fr;gap:15px;align-items:start;
@@ -934,7 +934,7 @@ body.t-ai .form input:focus,body.t-ai .form textarea:focus{border-color:var(--ai
 .cu p{font-size:14px;color:var(--ink-2);line-height:1.7}
 
 /* 결과물 예시 그리드 */
-.outs{margin-top:40px;display:grid;gap:13px}
+.outs{margin-top:32px;display:grid;gap:13px}
 @media (min-width:700px){.outs{grid-template-columns:repeat(2,1fr)}}
 @media (min-width:1040px){.outs{grid-template-columns:repeat(3,1fr)}}
 .out{
@@ -954,7 +954,7 @@ body.t-ai .form input:focus,body.t-ai .form textarea:focus{border-color:var(--ai
 /* ══════════════════════════════════════════════════════
    22. 멀티페이지 — 작업물 필터
    ══════════════════════════════════════════════════════ */
-.filters{display:flex;flex-wrap:wrap;gap:7px;margin:34px 0 8px}
+.filters{display:flex;flex-wrap:wrap;gap:7px;margin:26px 0 8px}
 .filter{
   padding:10px 17px;border-radius:var(--rp);border:1px solid var(--line-2);background:var(--paper);
   font-size:14.5px;font-weight:700;color:var(--ink-2);letter-spacing:-.025em;
@@ -972,7 +972,7 @@ body.t-ai .form input:focus,body.t-ai .form textarea:focus{border-color:var(--ai
    23. 멀티페이지 — 안내 박스 · CTA 밴드 · 다음 서비스
    ══════════════════════════════════════════════════════ */
 .note-box{
-  margin-top:32px;padding:20px 22px;border-radius:var(--r2);
+  margin-top:26px;padding:20px 22px;border-radius:var(--r2);
   background:var(--sv-t);border:1px solid color-mix(in srgb,var(--sv) 22%,transparent);
   font-size:14.5px;color:var(--ink-2);line-height:1.85;max-width:76ch;
 }
@@ -987,12 +987,12 @@ body.t-ai .form input:focus,body.t-ai .form textarea:focus{border-color:var(--ai
     radial-gradient(120% 130% at 74% 112%,#FF7A2F 0%,rgba(255,122,47,0) 58%),
     linear-gradient(132deg,#0F2FA8 0%,#1B5BFF 38%,#6D3BE0 68%,#E85C13 100%);
 }
-.band-in{padding-block:clamp(52px,7vw,80px);text-align:center}
+.band-in{padding-block:clamp(44px,5.4vw,64px);text-align:center}
 .band h2{font-size:clamp(25px,4vw,40px);margin-bottom:14px;color:#fff}
 .band p{font-size:clamp(15.5px,1.9vw,18px);color:rgba(255,255,255,.88);line-height:1.75;max-width:46ch;margin:0 auto 28px}
 .band-btns{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
 
-.nexts{margin-top:44px;display:grid;gap:13px}
+.nexts{margin-top:34px;display:grid;gap:13px}
 @media (min-width:760px){.nexts{grid-template-columns:repeat(2,1fr)}}
 .next{
   --sv:var(--web);--sv-d:var(--web-d);--sv-t:var(--web-t);
@@ -1030,7 +1030,7 @@ body.t-ai .form input:focus,body.t-ai .form textarea:focus{border-color:var(--ai
    진한 그라디언트 블록 대신 밝은 카드 3장.
    서비스 색은 상단 4px 바와 라벨에만 쓰고, 본문은 검정으로 읽는다.
    ══════════════════════════════════════════════════════ */
-.svcs-wrap{margin-top:clamp(28px,3.6vw,42px)}
+.svcs-wrap{margin-top:clamp(24px,2.6vw,32px)}
 .svcs-rail{height:4px;border-radius:4px;
   background:linear-gradient(90deg,var(--web),var(--clip) 55%,var(--ai) 88%,#FFA23D)}
 .svcs-cap{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;
@@ -1090,7 +1090,7 @@ body.t-ai .form input:focus,body.t-ai .form textarea:focus{border-color:var(--ai
 /* ══════════════════════════════════════════════════════
    25. 히어로 2단 + 브랜드 패널 (ON + DO)
    ══════════════════════════════════════════════════════ */
-.hero-grid{display:grid;gap:clamp(32px,4vw,54px);align-items:center}
+.hero-grid{display:grid;gap:clamp(28px,3.2vw,44px);align-items:center}
 @media (min-width:1040px){.hero-grid{grid-template-columns:1.04fr .96fr}}
 
 .bp{
@@ -1143,7 +1143,7 @@ body.t-ai .form input:focus,body.t-ai .form textarea:focus{border-color:var(--ai
 /* ══════════════════════════════════════════════════════
    26. 실제 작업물 카드 — 웹 미리보기 이미지
    ══════════════════════════════════════════════════════ */
-.pfs{display:grid;gap:16px;margin-top:44px}
+.pfs{display:grid;gap:16px;margin-top:34px}
 @media (min-width:700px){.pfs{grid-template-columns:repeat(2,1fr)}}
 @media (min-width:1040px){.pfs{grid-template-columns:repeat(3,1fr)}}
 

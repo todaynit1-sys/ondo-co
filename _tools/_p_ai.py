@@ -14,7 +14,7 @@ body = """
       지원하려는 직무에 맞는 AI 결과물을 함께 만들고, 그걸 이력서·면접에 어떻게 넣을지까지 정리해 드립니다.</p>
     <dl class="phead-facts">
       <div class="phead-fact"><dt>시작 가격</dt><dd>8<small>만원~</small></dd></div>
-      <div class="phead-fact"><dt>제작 기간</dt><dd>4~10<small>일</small></dd></div>
+      <div class="phead-fact"><dt>제작 기간</dt><dd>3~7<small>일</small></dd></div>
       <div class="phead-fact"><dt>구성</dt><dd>3<small>단계</small></dd></div>
       <div class="phead-fact"><dt>납품</dt><dd>URL<small>+ 소스</small></dd></div>
     </dl>
@@ -177,7 +177,7 @@ TRACK = """<div class="track">
     </ul>
     <div class="tr-foot">
       <p class="tr-price">8<small>~12만원</small></p>
-      <p class="tr-when">4~6일 · 부가세 별도 · 수정 2회</p>
+      <p class="tr-when">3~4일 · 무료 수정 2회</p>
       <a class="btn btn-line" href="__K__" target="_blank" rel="noopener">이 구성으로 문의</a>
     </div>
   </div>
@@ -195,7 +195,7 @@ TRACK = """<div class="track">
     </ul>
     <div class="tr-foot">
       <p class="tr-price">15<small>~18만원</small></p>
-      <p class="tr-when">5~7일 · 부가세 별도 · 수정 2회</p>
+      <p class="tr-when">4~6일 · 무료 수정 2회</p>
       <a class="btn btn-sv" href="__K__" target="_blank" rel="noopener">이 구성으로 문의</a>
     </div>
   </div>
@@ -213,7 +213,7 @@ TRACK = """<div class="track">
     </ul>
     <div class="tr-foot">
       <p class="tr-price">25<small>만원~</small></p>
-      <p class="tr-when">7~10일 · 부가세 별도 · 수정 2회</p>
+      <p class="tr-when">5~7일 · 무료 수정 2회</p>
       <a class="btn btn-line" href="__K__" target="_blank" rel="noopener">이 구성으로 문의</a>
     </div>
   </div>
@@ -227,9 +227,9 @@ body = (body
   .replace("__NEXTS__", nexts(P, "ai"))
   .replace("__STEPS__", steps([
      ("DAY 0", "상담 · 주제 정하기", "지원하려는 직무나 공고를 보여 주세요. 그 안에서 만들 만한 주제를 두세 개 뽑아 함께 고릅니다."),
-     ("DAY 1–3", "제작", "실제로 작동하는 형태로 만듭니다. 중간에 화면을 보여 드리고 방향을 맞춥니다."),
-     ("DAY 4–5", "배포 · 인수인계", "인터넷에 올려 주소를 드리고, 어떤 구조인지 설명해 드립니다. 여기서 본인이 설명할 수 있는 상태를 만듭니다."),
-     ("DAY 6–", "전략 · 강의", "STEP 02는 이력서·면접 자료를, STEP 03은 강의와 실습 자료를 함께 드립니다."),
+     ("DAY 1–2", "제작", "실제로 작동하는 형태로 만듭니다. 중간에 화면을 보여 드리고 방향을 맞춥니다."),
+     ("DAY 3–4", "배포 · 인수인계", "인터넷에 올려 주소를 드리고, 어떤 구조인지 설명해 드립니다. 여기서 본인이 설명할 수 있는 상태를 만듭니다."),
+     ("DAY 5–7", "전략 · 강의", "STEP 02는 이력서·면접 자료를, STEP 03은 강의와 실습 자료를 함께 드립니다."),
   ]))
   .replace("__FAQ__", faq([
      ("제가 만들지 않은 걸 제 것처럼 써도 되나요?",
@@ -260,6 +260,6 @@ LD = {"@context": "https://schema.org", "@type": "Service", "name": "온도 AI",
 
 page("ai/index.html",
      "온도 AI — 취업용 AI 결과물 제작 · 이력서 전략 · 바이브코딩 강의 | 온도컴퍼니",
-     "이력서에 쓸 결과물이 없다면 만들면 됩니다. 지원 직무에 맞는 AI 결과물 제작부터 이력서·면접 반영 전략, 직접 만드는 바이브코딩 강의까지 3단계. 8만원부터.",
+     "이력서에 쓸 결과물이 없다면 만들면 됩니다. 지원 직무에 맞는 AI 결과물 제작부터 이력서·면접 반영 전략, 직접 만드는 바이브코딩 강의까지 3단계. 8만원부터, 3~7일.",
      body, P, "ai/", ld=LD, theme="t-ai")
 print("ai/index.html")

@@ -28,7 +28,7 @@ body = """
       <a class="btn btn-line btn-lg" href="pricing/">요금 먼저 보기</a>
     </div>
     <p class="hero-trust ld ld4">
-      <span>5만원부터</span><span>영업일 2~10일</span><span>수정 포함</span><span>배포 주소까지 납품</span>
+      <span>5만원부터</span><span>영업일 2~7일</span><span>수정 포함</span><span>배포 주소까지 납품</span>
     </p>
       </div>
 
@@ -56,7 +56,7 @@ body = """
           <h2>온도 웹</h2>
           <p class="sc-role">검색에 보이게 · 반응형 홈페이지</p>
           <p class="sc-desc">가게 이름이나 “동네+업종”으로 검색했을 때 나올 자리를 만듭니다. 스마트폰 기준으로 먼저 만듭니다.</p>
-          <ul class="sc-chips"><li>반응형 5~7섹션</li><li>전화 바로걸기</li><li>카톡 채널</li><li>네이버 지도</li><li>문의폼</li></ul>
+          <ul class="sc-chips"><li>반응형 5~7섹션</li><li>전화 바로걸기</li><li>카톡 문의</li><li>네이버 지도</li><li>갤러리</li></ul>
           <dl class="sc-meta">
             <div><dt>시작 가격</dt><dd>5<small>만원~</small></dd></div>
             <div><dt>제작 기간</dt><dd>3~5<small>일</small></dd></div>
@@ -85,7 +85,7 @@ body = """
           <ul class="sc-chips"><li>작동하는 결과물</li><li>배포 주소·소스</li><li>이력서 반영 전략</li><li>면접 예상 질문</li><li>바이브코딩 강의</li></ul>
           <dl class="sc-meta">
             <div><dt>시작 가격</dt><dd>8<small>만원~</small></dd></div>
-            <div><dt>제작 기간</dt><dd>4~10<small>일</small></dd></div>
+            <div><dt>제작 기간</dt><dd>3~7<small>일</small></dd></div>
           </dl>
           <span class="sc-go">온도 AI 자세히 보기 →</span>
         </a>
@@ -126,7 +126,7 @@ body = """
       <ul class="svc-list rv">
         <li><span><b>모바일 우선 반응형</b> — 375px 기준으로 만들고 데스크톱까지 대응</span></li>
         <li><span><b>한국형 필수 요소</b> — 전화 바로걸기, 카톡 채널, 네이버 지도, 사업자 정보</span></li>
-        <li><span><b>문의폼</b> — 사장님 이메일로 바로 수신. 서버 관리 필요 없음</span></li>
+        <li><span><b>카톡 문의 버튼</b> — 누르면 바로 대화창. 관리할 계정이 늘지 않습니다</span></li>
         <li><span><b>카톡 공유 미리보기</b> — 링크 보냈을 때 제목·설명·이미지가 뜨게</span></li>
       </ul>
       <div class="svc-cta rv">
@@ -176,7 +176,7 @@ body = """
         <li><span><b>바이브코딩 강의</b> — 다음 결과물은 직접 만드실 수 있게</span></li>
       </ul>
       <div class="svc-cta rv">
-        <span class="svc-price">8만원~<small>4~10일</small></span>
+        <span class="svc-price">8만원~<small>3~7일</small></span>
         <a class="btn btn-sv" href="ai/">온도 AI 자세히 보기</a>
         <a class="btn btn-line" href="__K__" target="_blank" rel="noopener">카톡 상담</a>
       </div>
@@ -212,7 +212,7 @@ body = """
   <div class="wrap">
     <p class="eyebrow rv">Process <span class="ko">문의부터 납품까지</span></p>
     <h2 class="rv">하실 일은<br>자료 보내주시는 것 하나입니다.</h2>
-    <p class="lede rv">나머지는 저희가 합니다. 진행 상황은 카톡으로 그때그때 알려 드립니다. (온도 웹 기준 · 클립 2~3일 · AI 4~10일)</p>
+    <p class="lede rv">나머지는 저희가 합니다. 진행 상황은 카톡으로 그때그때 알려 드립니다. (온도 웹 기준 · 클립 2~3일 · AI 3~7일)</p>
     __STEPS__
   </div>
 </section>
@@ -250,9 +250,9 @@ body = (body
         ("주소는 어떻게 되나요? 매달 내는 돈이 있나요?",
          "기본은 무료 호스팅 주소로 드립니다. 월 이용료가 없습니다. ‘우리가게이름.com’ 같은 주소를 원하시면 도메인을 본인 명의로 구입하신 뒤(연 1~2만원 수준) 연결해 드립니다. 연결 작업은 2~3만원입니다."),
         ("만든 다음에 제가 직접 고칠 수 있나요?",
-         "홈페이지는 직접 고치는 관리자 화면이 기본 상품에 없습니다. 대신 수정할 내용을 카톡으로 보내 주시면 반영해 드리고 기본 2회가 포함됩니다. 이후는 건당 1~2만원이며, 자주 바꾸셔야 하면 월 유지보수가 저렴합니다."),
-        ("세금계산서 발행되나요?",
-         "발행해 드립니다. 문의 시 사업자등록증 사본을 함께 보내 주시면 됩니다. 표기된 금액은 모두 부가세 별도입니다."),
+         "홈페이지는 직접 고치는 관리자 화면이 기본 상품에 없습니다. 대신 수정할 내용을 카톡으로 보내 주시면 반영해 드립니다. 베이직·스탠다드는 무료 수정 <b>1회</b>, 프리미엄은 2회가 포함됩니다. 이후는 건당 1~2만원이며, 자주 바꾸셔야 하면 월 유지보수가 저렴합니다."),
+        ("결제는 어떻게 하나요? 증빙은 되나요?",
+         "크몽으로 오시면 크몽 결제 절차를 그대로 따르고, 카톡으로 직접 오시면 계좌 이체로 진행합니다. <b>세금계산서나 현금영수증이 필요하시면 문의하실 때 먼저 말씀해 주세요.</b> 발행 가능한 방법을 확인해서 알려 드리겠습니다. 확실하지 않은 것을 된다고 말씀드리지 않겠습니다."),
     ])))
 
 body += band(P, "지금 물어보세요", "견적만 물어보셔도 됩니다. 업종이나 상황만 알려 주시면 예상 금액과 일정을 바로 알려 드립니다.")

@@ -123,7 +123,7 @@ def cmp_table():
             <td>바로 쓸 수 있는 <b>웹 주소</b> + 소스 전체</td>
             <td>30초 세로 영상 + 썸네일</td>
             <td>작동하는 <b>웹앱 주소</b> + 소스 + 설명 자료</td></tr>
-          <tr><th scope="row">기간</th><td>3~5일</td><td>2~3일</td><td>4~10일</td></tr>
+          <tr><th scope="row">기간</th><td>3~5일</td><td>2~3일</td><td>3~7일</td></tr>
           <tr><th scope="row">시작 가격</th><td><b>5만원~</b></td><td><b>20만원</b> <small>편당</small></td><td><b>8만원~</b></td></tr>
           <tr><th scope="row">준비해 주실 것</th>
             <td>가게 사진, 소개 문구, 연락처</td>
@@ -155,7 +155,7 @@ def plan(name, forwho, price, unit, items, cta, href, best=False, tag=None):
     return ('<div class="' + cls + '">' + t +
             '<h3>' + name + '</h3><p class="plan-for">' + forwho + '</p>'
             '<p class="plan-price">' + price + '<small>' + unit + '</small></p>'
-            '<p class="plan-unit">부가세 별도</p>'
+            '<p class="plan-unit">상담에서 구성 확인 후 확정</p>'
             '<ul>' + li + '</ul>'
             '<a class="' + btn + '" href="' + href + '" target="_blank" rel="noopener">' + cta + '</a></div>')
 

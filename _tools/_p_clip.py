@@ -85,7 +85,7 @@ body = """
 
 <section class="sec sec-mist" id="price">
   <div class="wrap">
-    <p class="eyebrow rv">Price <span class="ko">부가세 별도</span></p>
+    <p class="eyebrow rv">Price <span class="ko">상담 후 확정</span></p>
     <h2 class="rv">한 편 단위로 계산합니다</h2>
     <p class="lede rv">기준은 <b>30초 한 편</b>입니다. 기획·촬영 구성·편집·자막·썸네일이 모두 포함된 금액이고, 여러 편을 함께 하시면 편당 금액이 내려갑니다.</p>
     <div class="plans" style="margin-top:38px">__PLANS__</div>
