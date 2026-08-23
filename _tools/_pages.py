@@ -71,7 +71,7 @@ body = """
           <p class="sc-desc">촬영이 필요 없습니다. 알리고 싶은 내용만 주시면 AI로 화면과 목소리를 만들어 세로 영상으로 완성합니다.</p>
           <ul class="sc-chips"><li>촬영 없음</li><li>동물·아나운서 연출</li><li>시나리오·대사</li><li>자막·배경음</li><li>썸네일</li></ul>
           <dl class="sc-meta">
-            <div><dt>30초 1편</dt><dd>25<small>만원~</small></dd></div>
+            <div><dt>30초 1편</dt><dd>20<small>만원</small></dd></div>
             <div><dt>제작 기간</dt><dd>2~5<small>일</small></dd></div>
           </dl>
           <span class="sc-go">온도 클립 자세히 보기 →</span>
@@ -153,7 +153,7 @@ body = """
         <li><span><b>자막 · 배경음 · 썸네일</b> — 올릴 수 있는 상태로 드립니다</span></li>
       </ul>
       <div class="svc-cta rv">
-        <span class="svc-price">30초 25만원~<small>2~5일</small></span>
+        <span class="svc-price">30초 20만원<small>60초 40만원</small></span>
         <a class="btn btn-sv" href="clip/">온도 클립 자세히 보기</a>
         <a class="btn btn-line" href="__K__" target="_blank" rel="noopener">카톡 상담</a>
       </div>
@@ -270,7 +270,7 @@ LD_ORG = {
    "sameAs": [KAKAO],
    "makesOffer": [
      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "온도 웹", "serviceType": "반응형 홈페이지 제작", "url": SITE + "web/"}, "priceCurrency": "KRW", "price": "50000"},
-     {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "온도 클립", "serviceType": "AI 홍보 영상 제작", "url": SITE + "clip/"}, "priceCurrency": "KRW", "price": "250000"},
+     {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "온도 클립", "serviceType": "AI 홍보 영상 제작", "url": SITE + "clip/"}, "priceCurrency": "KRW", "price": "200000"},
      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "온도 AI", "serviceType": "취업용 AI 결과물 제작 및 제작 강의", "url": SITE + "ai/"}, "priceCurrency": "KRW", "price": "80000"}
    ]},
   {"@type": "WebSite", "@id": SITE + "#site", "url": SITE, "name": "온도컴퍼니", "inLanguage": "ko-KR",

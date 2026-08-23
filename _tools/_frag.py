@@ -124,7 +124,7 @@ def cmp_table():
             <td>AI로 만든 세로 영상 + 썸네일</td>
             <td>작동하는 <b>웹앱 주소</b> + 소스 + 설명 자료</td></tr>
           <tr><th scope="row">기간</th><td>3~5일</td><td>2~5일</td><td>3~7일</td></tr>
-          <tr><th scope="row">시작 가격</th><td><b>5만원~</b></td><td><b>25만원</b> <small>30초 1편</small></td><td><b>8만원~</b></td></tr>
+          <tr><th scope="row">시작 가격</th><td><b>5만원~</b></td><td><b>20만원</b> <small>30초 1편</small></td><td><b>8만원~</b></td></tr>
           <tr><th scope="row">준비해 주실 것</th>
             <td>가게 사진, 소개 문구, 연락처</td>
             <td>알리고 싶은 내용 한두 줄</td>
@@ -166,10 +166,11 @@ def plan(name, forwho, price, unit, items, cta, href, best=False, tag=None, was=
 # 실제 작업물 (배포된 사이트) — 미리보기 이미지 포함
 #   이미지: images/work/<slug>.webp  (실제 사이트 첫 화면 캡처)
 # ══════════════════════════════════════════════════════
-def pf(P, slug, mood, url, host, name, cat, desc, tags, tag, alt):
+def pf(P, slug, mood, url, host, name, cat, desc, tags, tag, alt, mood_t=None):
     li = "".join('<li>' + t + '</li>' for t in tags)
+    mt = (';--mood-t:' + mood_t) if mood_t else ''
     return ('<a class="pf rv" data-svc-tag="' + tag + '" href="' + url + '" target="_blank" rel="noopener"'
-            ' style="--mood:' + mood + '">\n'
+            ' style="--mood:' + mood + mt + '">\n'
             '  <div class="pf-shot">\n'
             '    <div class="pf-bar"><i></i><i></i><i></i><span>' + host + '</span></div>\n'
             '    <img src="' + P + 'images/work/' + slug + '.webp" alt="' + alt + '"'
@@ -198,7 +199,7 @@ PORTFOLIO = [
      "세계여행을 시작한 개묘부부의 채널 소개 페이지입니다. "
      "손글씨 서체와 파스텔 톤으로 두 캐릭터를 먼저 보여 주고, 인스타그램으로 자연스럽게 넘어가도록 구성했습니다.",
      ["반응형", "캐릭터 소개", "SNS 연결", "손글씨 톤"], "web",
-     "개묘한여행 사이트 첫 화면 — 채널 이름과 두 캐릭터 소개"),
+     "개묘한여행 사이트 첫 화면 — 채널 이름과 두 캐릭터 소개", "#A32F49"),
 
     ("career-lab", "#2C3D63",
      "https://career-lab.ondoco.workers.dev/", "career-lab.ondoco.workers.dev",

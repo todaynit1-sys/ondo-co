@@ -17,6 +17,7 @@ body = """
 
 <section class="sec contact">
   <div class="wrap">
+    <h2 class="sr">문의 방법</h2>
     <div class="cgrid" style="margin-top:0">
       <div>
         <div class="kko-card rv">
@@ -149,6 +150,6 @@ b404 = """
 """.replace("__K__", K)
 
 page("404.html", "페이지를 찾을 수 없습니다 — 온도컴퍼니",
-     "요청하신 주소에는 페이지가 없습니다. 온도컴퍼니 홈에서 다시 찾아보세요.",
+     "요청하신 주소에는 페이지가 없습니다. 주소가 바뀌었거나 잘못 입력되었을 수 있습니다. 온도컴퍼니 홈에서 홈페이지 제작·AI 홍보 영상·취업용 AI 결과물 서비스를 다시 찾아보세요.",
      b404, P404, None, canon="404.html")
 print("404.html")

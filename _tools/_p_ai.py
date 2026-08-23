@@ -83,7 +83,7 @@ body = """
     <div class="pfs">__PFS_AI__</div>
     <p class="cmp-note rv" style="margin-top:24px">
       두 개 모두 화면 여러 개와 외부 데이터 연동이 들어간 결과물입니다. 이 정도가 이력서에 링크로 들어갑니다.
-      <a href="../work/" style="color:var(--sv);font-weight:700">작업물 전체 보기 →</a>
+      <a href="../work/" style="color:var(--sv-on);font-weight:700">작업물 전체 보기 →</a>
     </p>
   </div>
 </section>
@@ -222,7 +222,7 @@ TRACK = """<div class="track">
 body = (body
   .replace("__CRUMB__", crumb(P, [(None, "온도 AI")]))
   .replace("__TRACK__", TRACK)
-  .replace("__PFS_AI__", "".join(pf(P, *x) for x in PORTFOLIO if x[-2] == "ai"))
+  .replace("__PFS_AI__", "".join(pf(P, *x) for x in PORTFOLIO if x[8] == "ai"))
   .replace("__AICARD__", AICARD)
   .replace("__NEXTS__", nexts(P, "ai"))
   .replace("__STEPS__", steps([

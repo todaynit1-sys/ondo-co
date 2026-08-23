@@ -85,7 +85,7 @@ body = """
     <div class="works">__WORKS__</div>
     <p class="cmp-note rv" style="margin-top:26px">
       위 화면은 실제 고객 사이트가 아니라 구성 순서를 보여주는 예시입니다.
-      <a href="../work/" style="color:var(--sv);font-weight:700">작업물 페이지에서 더 보기 →</a>
+      <a href="../work/" style="color:var(--sv-on);font-weight:700">작업물 페이지에서 더 보기 →</a>
     </p>
   </div>
 </section>
@@ -151,7 +151,7 @@ body = (body
   .replace("__CRUMB__", crumb(P, [(None, "온도 웹")]))
   .replace("__K__", K)
   .replace("__PHONE__", PHONE_WEB)
-  .replace("__PFS_WEB__", "".join(pf(P, *x) for x in PORTFOLIO if x[-2] == "web"))
+  .replace("__PFS_WEB__", "".join(pf(P, *x) for x in PORTFOLIO if x[8] == "web"))
   .replace("__WORKS__", "".join(work(*w) for w in WEB_WORKS))
   .replace("__PLANS__", PLANS)
   .replace("__NEXTS__", nexts(P, "web"))
