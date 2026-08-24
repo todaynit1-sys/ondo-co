@@ -34,7 +34,7 @@ def nav(P, here):
         links += '<a href="' + P + href + '"' + cls + '>' + label + '</a>'
     menu = ""
     for href, label, svc in NAV:
-        sub = {"web/": "반응형 홈페이지", "clip/": "홍보 숏폼", "ai/": "취업용 AI 결과물",
+        sub = {"web/": "반응형 홈페이지", "clip/": "AI 홍보 영상", "ai/": "취업용 AI 결과물",
                "work/": "만든 것들", "pricing/": "세 서비스 요금표"}[href]
         d = ' data-svc="' + svc + '"' if svc else ''
         menu += ('<a href="' + P + href + '"' + d + '><span>' + label
@@ -56,7 +56,7 @@ def nav(P, here):
 '    <button class="menu-x" id="menuX" type="button" aria-label="메뉴 닫기">×</button>\n'
 '  </div>\n'
 '  <nav class="menu-list" aria-label="전체 메뉴">' + menu +
-'    <a href="' + P + 'contact/"><span>문의</span><small>카톡·문의폼</small></a>\n'
+'    <a href="' + P + 'contact/"><span>문의</span><small>카톡으로 바로</small></a>\n'
 '  </nav>\n'
 '  <div class="menu-cta">\n'
 '    <a class="btn btn-kko btn-lg" href="' + KAKAO + '" target="_blank" rel="noopener">카카오톡으로 상담하기</a>\n'
@@ -169,8 +169,8 @@ def band(P, h2, p, svc=None):
 
 def nexts(P, cur):
     data = {
-      "web":  ("web",  "Ondo Web",  "온도 웹", "검색했을 때 나올 자리를 만듭니다. 전화·카톡·지도·문의폼을 한 화면에 정리한 반응형 홈페이지.", "web/"),
-      "clip": ("clip", "Ondo Clip", "온도 클립", "검색하지 않은 사람에게 닿는 통로. 찍어둔 사진·영상으로 30초 세로 영상을 만듭니다.", "clip/"),
+      "web":  ("web",  "Ondo Web",  "온도 웹", "검색했을 때 나올 자리를 만듭니다. 전화 바로걸기·카톡 문의·네이버 지도를 한 화면에 정리한 반응형 홈페이지.", "web/"),
+      "clip": ("clip", "Ondo Clip", "온도 클립", "촬영 없이 AI로 홍보 영상을 만듭니다. 동물 캐릭터·AI 아나운서 등 원하는 연출로 30초 또는 60초 세로 영상.", "clip/"),
       "ai":   ("ai",   "Ondo AI",   "온도 AI", "이력서에 쓸 결과물이 없다면 만들면 됩니다. 취업용 AI 결과물부터 제작 강의까지.", "ai/"),
     }
     out = '<div class="nexts">'

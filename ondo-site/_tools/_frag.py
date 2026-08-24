@@ -88,12 +88,12 @@ WEB_WORKS = [
      "타이포가 히어로. 작업물 3열 그리드로 스크롤 없이 훑게 합니다.", PH_BRAND, "web"),
 ]
 CLIP_WORKS = [
-    ("#7C3AED", "#F4EDFF", "Before &amp; After", "시공 전후 30초",
-     "지저분한 화면에서 깨끗한 화면으로 한 번에 넘기는 구성. 첫 1초에 전후를 붙입니다.", PH_CLIP, "clip"),
-    ("#9333EA", "#F6EDFF", "Menu Cut", "메뉴 소개 30초",
-     "대표 메뉴 3개를 한 컷씩. 가격과 위치 자막을 마지막 3초에 고정합니다.", PH_CLIP, "clip"),
-    ("#6D28D9", "#F1EBFF", "Owner Interview", "사장님 한마디 30초",
-     "말이 길어도 자막으로 끊어 읽히게. 소리를 꺼도 내용이 전달되는 편집입니다.", PH_CLIP, "clip"),
+    ("#7C3AED", "#F4EDFF", "Animal Cast", "동물 캐릭터 광고 30초",
+     "말하는 동물 캐릭터가 가게를 소개하는 구성. 사람이 나오지 않아 부담이 없고 시선이 잘 멈춥니다.", PH_CLIP, "clip"),
+    ("#9333EA", "#F6EDFF", "AI Anchor", "AI 아나운서 소개 30초",
+     "뉴스 형식으로 또박또박 전달하는 구성. 정보량이 많은 업종(학원·병원·수리)에 맞습니다.", PH_CLIP, "clip"),
+    ("#6D28D9", "#F1EBFF", "Story 60s", "메뉴 · 서비스 소개 60초",
+     "장면을 여러 개로 나눠 설명하는 구성. 왜 좋은지 근거를 붙여야 하는 경우에 씁니다.", PH_CLIP, "clip"),
 ]
 AI_WORKS = [
     ("#F2650F", "#FFF1E7", "Job Portfolio", "취업용 결과물 웹앱",
@@ -110,24 +110,24 @@ def cmp_table():
           <tr>
             <th scope="col"><span class="sr">구분</span></th>
             <th scope="col">온도 웹<small>반응형 홈페이지</small></th>
-            <th scope="col">온도 클립<small>홍보 숏폼</small></th>
+            <th scope="col">온도 클립<small>AI 홍보 영상</small></th>
             <th scope="col">온도 AI<small>취업용 AI 결과물</small></th>
           </tr>
         </thead>
         <tbody>
           <tr><th scope="row">이런 분께</th>
             <td>검색했을 때 나올 자리가 <b>아예 없는</b> 사장님</td>
-            <td>영상으로 <b>가게를 알리고 싶은</b> 사장님</td>
+            <td><b>촬영할 시간도 소재도 없는</b> 사장님</td>
             <td>이력서에 쓸 <b>결과물이 없는</b> 취업·이직 준비생</td></tr>
           <tr><th scope="row">받으시는 것</th>
             <td>바로 쓸 수 있는 <b>웹 주소</b> + 소스 전체</td>
-            <td>30초 세로 영상 + 썸네일</td>
+            <td>AI로 만든 세로 영상 + 썸네일</td>
             <td>작동하는 <b>웹앱 주소</b> + 소스 + 설명 자료</td></tr>
-          <tr><th scope="row">기간</th><td>3~5일</td><td>2~3일</td><td>4~10일</td></tr>
-          <tr><th scope="row">시작 가격</th><td><b>5만원~</b></td><td><b>20만원</b> <small>편당</small></td><td><b>8만원~</b></td></tr>
+          <tr><th scope="row">기간</th><td>3~5일</td><td>2~5일</td><td>3~7일</td></tr>
+          <tr><th scope="row">시작 가격</th><td><b>5만원~</b></td><td><b>20만원</b> <small>30초 1편</small></td><td><b>8만원~</b></td></tr>
           <tr><th scope="row">준비해 주실 것</th>
             <td>가게 사진, 소개 문구, 연락처</td>
-            <td>찍어둔 사진·영상</td>
+            <td>알리고 싶은 내용 한두 줄</td>
             <td>지원할 직무나 공고</td></tr>
         </tbody>
       </table>
@@ -147,15 +147,17 @@ def steps(rows):
                 '<h3>' + h + '</h3><p>' + p + '</p></div>')
     return out + '</div>'
 
-def plan(name, forwho, price, unit, items, cta, href, best=False, tag=None):
+def plan(name, forwho, price, unit, items, cta, href, best=False, tag=None, was=None, note=None):
     li = "".join('<li><span>' + x + '</span></li>' for x in items)
     t = '<span class="plan-tag">' + tag + '</span>' if tag else ''
     cls = 'plan rv plan-best' if best else 'plan rv'
     btn = 'btn btn-sv' if best else 'btn btn-line'
+    w = '<p class="plan-was">정가 <s>' + was + '</s> <em>오픈 기념 할인</em></p>' if was else ''
+    n = note or '상담에서 구성 확인 후 확정'
     return ('<div class="' + cls + '">' + t +
-            '<h3>' + name + '</h3><p class="plan-for">' + forwho + '</p>'
+            '<h3>' + name + '</h3><p class="plan-for">' + forwho + '</p>' + w +
             '<p class="plan-price">' + price + '<small>' + unit + '</small></p>'
-            '<p class="plan-unit">부가세 별도</p>'
+            '<p class="plan-unit">' + n + '</p>'
             '<ul>' + li + '</ul>'
             '<a class="' + btn + '" href="' + href + '" target="_blank" rel="noopener">' + cta + '</a></div>')
 
@@ -164,10 +166,11 @@ def plan(name, forwho, price, unit, items, cta, href, best=False, tag=None):
 # 실제 작업물 (배포된 사이트) — 미리보기 이미지 포함
 #   이미지: images/work/<slug>.webp  (실제 사이트 첫 화면 캡처)
 # ══════════════════════════════════════════════════════
-def pf(P, slug, mood, url, host, name, cat, desc, tags, tag, alt):
+def pf(P, slug, mood, url, host, name, cat, desc, tags, tag, alt, mood_t=None):
     li = "".join('<li>' + t + '</li>' for t in tags)
+    mt = (';--mood-t:' + mood_t) if mood_t else ''
     return ('<a class="pf rv" data-svc-tag="' + tag + '" href="' + url + '" target="_blank" rel="noopener"'
-            ' style="--mood:' + mood + '">\n'
+            ' style="--mood:' + mood + mt + '">\n'
             '  <div class="pf-shot">\n'
             '    <div class="pf-bar"><i></i><i></i><i></i><span>' + host + '</span></div>\n'
             '    <img src="' + P + 'images/work/' + slug + '.webp" alt="' + alt + '"'
@@ -196,7 +199,7 @@ PORTFOLIO = [
      "세계여행을 시작한 개묘부부의 채널 소개 페이지입니다. "
      "손글씨 서체와 파스텔 톤으로 두 캐릭터를 먼저 보여 주고, 인스타그램으로 자연스럽게 넘어가도록 구성했습니다.",
      ["반응형", "캐릭터 소개", "SNS 연결", "손글씨 톤"], "web",
-     "개묘한여행 사이트 첫 화면 — 채널 이름과 두 캐릭터 소개"),
+     "개묘한여행 사이트 첫 화면 — 채널 이름과 두 캐릭터 소개", "#A32F49"),
 
     ("career-lab", "#2C3D63",
      "https://career-lab.ondoco.workers.dev/", "career-lab.ondoco.workers.dev",
