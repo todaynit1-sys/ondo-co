@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://REPLACE-ME.github.io/ondo/sitemap.xml
+Sitemap: https://todaynit1-sys.github.io/ondo-co/sitemap.xml

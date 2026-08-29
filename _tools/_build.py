@@ -5,7 +5,7 @@ import json, os, io
 # 어디에서 실행하든 사이트 루트(= _tools 의 상위 폴더)에 파일을 쓴다
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-SITE = "https://REPLACE-ME.github.io/ondo/"     # 배포 후 실제 주소로 일괄 치환
+SITE = "https://todaynit1-sys.github.io/ondo-co/"     # 배포 후 실제 주소로 일괄 치환
 KAKAO = "https://open.kakao.com/o/suzwcdKi"
 FORM_ACTION = "https://formspree.io/f/REPLACE_FORMSPREE"
 BRAND = "온도컴퍼니"

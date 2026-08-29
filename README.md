@@ -66,14 +66,12 @@ git push -u origin main
 
 ## 3. 배포한 다음 반드시 바꿀 것
 
-### ① 사이트 주소 (제일 중요)
-지금은 임시 주소가 들어가 있습니다. 실제 주소가 나오면 **전체 찾아 바꾸기**로 한 번에 교체하세요.
+### ① 사이트 주소 — 2026-08-29 적용 완료
+`https://todaynit1-sys.github.io/ondo-co/` 로 전부 치환했습니다.
+(`_tools/_build.py`의 `SITE` 값 · 모든 `.html` · `robots.txt` · `sitemap.xml`)
 
-- 찾을 문자열: `https://REPLACE-ME.github.io/ondo/`
-- 바꿀 문자열: 실제 주소 (예: `https://hyunjun.github.io/ondo/`) — **끝의 `/`까지 포함**
-- 들어 있는 파일: 모든 `.html`, `robots.txt`, `sitemap.xml`
-
-이걸 바꿔야 카카오톡·구글에 링크를 보냈을 때 미리보기 이미지가 제대로 뜹니다.
+주소가 또 바뀌면 `_tools/_build.py`의 `SITE` 한 줄을 고치고 생성 스크립트를 다시 돌린 뒤,
+`robots.txt`와 `sitemap.xml`만 손으로 바꾸면 됩니다.
 
 ### ② 문의폼 수신 주소
 지금은 폼을 제출하면 **“카카오톡으로 연락 주세요”** 안내가 뜨도록 처리되어 있습니다.
@@ -108,10 +106,11 @@ git push -u origin main
 | 작업물 카드 | `work/index.html`의 `.works` 안 카드들 |
 
 ### 작업물(포트폴리오) 추가·수정
-지금 걸려 있는 사이트는 다섯 개이고, **모두 실제 첫 화면 캡처가 미리보기로 들어가 있습니다.**
+지금 걸려 있는 사이트는 여섯 개이고, **모두 실제 첫 화면 캡처가 미리보기로 들어가 있습니다.**
 
 | 이름 | 주소 | 분류 | 미리보기 |
 |---|---|---|---|
+| FEET Lab | feet-inha.ondoco.workers.dev | 온도 웹 · 대학 연구실 | `images/work/feet-lab.webp` |
 | 세이프클린ENG | safeclean.ondoco.workers.dev | 온도 웹 · 시공/설비 | `images/work/safeclean.webp` |
 | 개묘한여행 | gaemyo-travel.vercel.app | 온도 웹 · 개인 브랜딩 | `images/work/gaemyo.webp` |
 | 커리어전략연구소 | career-lab.ondoco.workers.dev | 온도 웹 · 전문가 브랜딩 | `images/work/career-lab.webp` |
@@ -122,8 +121,8 @@ git push -u origin main
 
 | 페이지 | 보이는 것 |
 |---|---|
-| 메인 · 작업물 | 5개 전부 |
-| 온도 웹 | 온도 웹 3개 |
+| 메인 · 작업물 | 6개 전부 |
+| 온도 웹 | 온도 웹 4개 |
 | 온도 AI | 온도 AI 2개 |
 
 한 곳만 고치면 어긋나니 `_tools/_frag.py` 아래쪽 `PORTFOLIO` 목록을 고치고

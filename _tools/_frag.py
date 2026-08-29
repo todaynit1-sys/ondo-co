@@ -185,6 +185,14 @@ def pf(P, slug, mood, url, host, name, cat, desc, tags, tag, alt, mood_t=None):
             '  </div>\n</a>')
 
 PORTFOLIO = [
+    ("feet-lab", "#1D4E86",
+     "https://feet-inha.ondoco.workers.dev/", "feet-inha.ondoco.workers.dev",
+     "FEET Lab", "Ondo Web · 대학 연구실",
+     "인하대학교 환경공학과 FEET 연구실 사이트입니다. "
+     "무엇을 연구하는 곳인지 먼저 보여 주고, 논문과 구성원 소개를 지나 연구실 지원 문의로 이어지도록 5개 페이지로 나눠 구성했습니다.",
+     ["반응형", "5개 페이지", "논문 아카이브", "구성원 소개", "원문 링크 연결"], "web",
+     "FEET Lab 사이트 첫 화면 — 안 보이는 것을 끝까지 측정합니다 문구와 연구 소개 버튼"),
+
     ("safeclean", "#1B5BFF",
      "https://safeclean.ondoco.workers.dev/", "safeclean.ondoco.workers.dev",
      "세이프클린ENG", "Ondo Web · 시공 · 설비",
