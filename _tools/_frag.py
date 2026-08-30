@@ -185,6 +185,14 @@ def pf(P, slug, mood, url, host, name, cat, desc, tags, tag, alt, mood_t=None):
             '  </div>\n</a>')
 
 PORTFOLIO = [
+    ("cheongdam", "#1A1714",
+     "https://cheongdam.ondoco.workers.dev/", "cheongdam.ondoco.workers.dev",
+     "헤어청담", "Ondo Web · 미용실",
+     "안산 고잔동 미용실의 원페이지 사이트입니다. "
+     "매장 로고와 실제 시술 사진을 앞에 두고, 스타일을 본 다음 가격표를 지나 인스타 DM 예약으로 이어지도록 순서를 잡았습니다.",
+     ["반응형", "룩북 9장", "가격표 76항목", "인스타 DM 예약", "전화 바로걸기"], "web",
+     "헤어청담 사이트 첫 화면 — CHEONG DAM 로고와 안산 고잔동 미용실 한 줄 소개, 인스타 DM 예약 버튼"),
+
     ("feet-lab", "#1D4E86",
      "https://feet-inha.ondoco.workers.dev/", "feet-inha.ondoco.workers.dev",
      "FEET Lab", "Ondo Web · 대학 연구실",
@@ -216,6 +224,14 @@ PORTFOLIO = [
      "네이비와 금색으로 신뢰감을 먼저 세우고, 연구 분야와 소장 소개를 지나 자문 의뢰까지 한 흐름으로 이어집니다.",
      ["반응형", "연구 분야", "아카이브", "자가진단 도구", "자문 의뢰"], "web",
      "커리어전략연구소 사이트 첫 화면 — 커리어에도 전략이 필요합니다 문구와 소개 버튼"),
+
+    ("cleansheet", "#245FA8",
+     "https://cleansheet-omega.vercel.app/", "cleansheet-omega.vercel.app",
+     "CLEANSHEET", "Ondo AI · 취업용 결과물",
+     "표를 붙여넣으면 중복 입력·거래처명 표기 불일치·날짜 형식 혼재를 먼저 찾아내고, "
+     "우리 장부와 거래처 명세서를 맞춰 차액까지 뽑는 도구입니다. 영업관리·회계·정산 직무에 맞춰 만들었습니다.",
+     ["웹앱", "표 붙여넣기 점검", "두 표 대조", "표기 차이 흡수", "결과 CSV 내려받기"], "ai",
+     "CLEANSHEET 대조 결과 화면 — 표 A·B 합계와 차액, 금액 다름·A에만·B에만 항목 목록"),
 
     ("ziggle-stock", "#4F46E5",
      "https://ziggle-stock.vercel.app/", "ziggle-stock.vercel.app",

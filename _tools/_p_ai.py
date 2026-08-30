@@ -60,6 +60,31 @@ body = """
 
 <section class="sec">
   <div class="wrap">
+    <p class="eyebrow rv">Work <span class="ko">실제 결과물</span></p>
+    <h2 class="rv">결과물은 이런 모양입니다</h2>
+    <p class="lede rv">실제로 만들어 배포한 결과물입니다. 눌러서 직접 만져 보실 수 있습니다.</p>
+    <div class="feat rv">
+      <div>
+        <p class="feat-k">CLEANSHEET</p>
+        <h3>표 검증·대사 도구</h3>
+        <p>엑셀은 계산은 해주지만, 데이터가 틀렸는지는 알려주지 않습니다.
+          표를 붙여넣으면 중복 입력·거래처명 표기 불일치·날짜 형식 혼재를 먼저 찾아내고,
+          우리 장부와 거래처 명세서를 맞춰 차액까지 뽑습니다.</p>
+      </div>
+      <a class="btn btn-sv btn-lg" href="https://cleansheet-omega.vercel.app/" target="_blank" rel="noopener">열어 보기</a>
+    </div>
+    <p class="cmp-note rv" style="margin-top:14px">영업관리·회계·정산 직무를 준비하는 분께 맞춰 만든 결과물입니다.
+      직무가 다르면 그 직무의 자료와 용어로 다시 만들어 드립니다.</p>
+    <div class="pfs" style="margin-top:30px">__PFS_AI__</div>
+    <p class="cmp-note rv" style="margin-top:24px">
+      셋 다 화면이 여러 개이고, 계산이나 대조가 실제로 돌아가는 결과물입니다. 이 정도가 이력서에 링크로 들어갑니다.
+      <a href="../work/" style="color:var(--sv-on);font-weight:700">작업물 전체 보기 →</a>
+    </p>
+  </div>
+</section>
+
+<section class="sec sec-mist">
+  <div class="wrap">
     <p class="eyebrow rv">Output <span class="ko">어떤 걸 만드나</span></p>
     <h2 class="rv">지원하는 직무에서 실제로 반복되는 일</h2>
     <p class="lede rv">화려한 기술을 쓰는 것보다, 그 회사 사람이 보고 “이거 우리 일인데”라고 느끼는 게 훨씬 셉니다. 아래는 방향 예시입니다.</p>
@@ -75,18 +100,6 @@ body = """
   </div>
 </section>
 
-<section class="sec sec-mist">
-  <div class="wrap">
-    <p class="eyebrow rv">Work <span class="ko">실제 결과물</span></p>
-    <h2 class="rv">이런 게 나옵니다</h2>
-    <p class="lede rv">설명보다 직접 눌러 보시는 게 빠릅니다. 아래는 바이브코딩으로 만들어 실제로 배포한 웹앱입니다.</p>
-    <div class="pfs">__PFS_AI__</div>
-    <p class="cmp-note rv" style="margin-top:24px">
-      두 개 모두 화면 여러 개와 외부 데이터 연동이 들어간 결과물입니다. 이 정도가 이력서에 링크로 들어갑니다.
-      <a href="../work/" style="color:var(--sv-on);font-weight:700">작업물 전체 보기 →</a>
-    </p>
-  </div>
-</section>
 
 <section class="sec sec-mist svc" id="strategy">
   <div class="wrap svc-grid">
@@ -103,6 +116,51 @@ body = """
         <li><span><b>면접 예상 질문과 답변 뼈대</b> — “왜 그렇게 만들었나요”에 답할 수 있게</span></li>
         <li><span><b>공고별 맞춤 조정</b> — 공고를 주시면 강조할 부분을 바꿔 드립니다</span></li>
       </ul>
+      <div class="faq rex rv">
+        <details>
+          <summary>이런 문장을 함께 드립니다 — CLEANSHEET 예시</summary>
+          <div class="faq-a">
+            <p class="rex-t">이력서 한 줄 · 프로젝트 항목</p>
+            <div class="rex-box">
+              <b>거래처 실적 데이터 검증·대사 도구 제작·배포 (2026.09)</b>
+              <ul>
+                <li>표 붙여넣기 기반 자동 집계 · 이상값 탐지 · 두 표 대조(월 마감 대사) 웹 도구 개발</li>
+                <li>중복 입력, 거래처명 표기 불일치, 날짜 형식 혼재를 자동 검출하는 규칙 설계</li>
+                <li>상호 표기·날짜 형식이 서로 달라도 같은 건으로 인식하는 정규화 매칭 구현</li>
+              </ul>
+            </div>
+
+            <p class="rex-t">자기소개서 첫 문단</p>
+            <div class="rex-box">
+              영업관리 직무를 준비하며 월 마감 자료의 구조를 들여다보니, 오류의 대부분이 계산식이 아니라
+              원본 데이터에서 발생한다는 점을 알게 되었습니다. 같은 거래처가 <b>㈜한울상사</b>와 <b>한울상사</b>로
+              나뉘어 입력되면 피벗 합계가 두 줄로 쪼개지고, 날짜 형식이 섞이면 정렬 순서가 어긋납니다.
+            </div>
+
+            <p class="rex-t">면접에서 이렇게 나옵니다</p>
+            <div class="rex-box">
+              <p class="rex-q">Q. “그거 VLOOKUP으로 되는 거 아닌가요?”</p>
+              VLOOKUP은 글자가 정확히 같아야 찾습니다. ㈜한울상사와 한울상사는 #N/A가 뜹니다.
+              그리고 한 방향만 봅니다 — 상대 명세서에만 있는 건은 반대로 한 번 더 돌려야 나옵니다.
+            </div>
+            <div class="rex-box">
+              <p class="rex-q">Q. “실제 회사 데이터로 써 보신 건가요?”</p>
+              아닙니다. 직무를 이해하려고 공개된 자료 형식에 맞춰 직접 만든 도구입니다.
+              다만 마감 업무의 병목이 계산이 아니라 데이터 정합성이라는 걸 알게 됐고, 지금 화면에서 바로 보여드릴 수 있습니다.
+            </div>
+
+            <p class="rex-t">이렇게는 쓰지 마세요</p>
+            <div class="rex-box">
+              <ul>
+                <li><b>“실무에 도입해 업무 효율 30% 개선”</b> — 근거를 물으면 답할 수 없습니다. 한 번에 신뢰를 잃습니다.</li>
+                <li><b>“AI가 만들어 줬습니다”</b>(이 말만) — 사실이지만 절반입니다. 무엇을 정했는지를 반드시 함께 말하세요.</li>
+              </ul>
+            </div>
+
+            <p class="rex-foot">없는 경력을 만들어 드리지는 않습니다. 만든 것을 어떻게 말할지를 정리해 드립니다.</p>
+          </div>
+        </details>
+      </div>
       <div class="svc-cta rv">
         <span class="svc-price">STEP 02부터<small>15만원~</small></span>
         <a class="btn btn-sv" href="__K__" target="_blank" rel="noopener">카톡으로 상담하기</a>

@@ -106,14 +106,16 @@ git push -u origin main
 | 작업물 카드 | `work/index.html`의 `.works` 안 카드들 |
 
 ### 작업물(포트폴리오) 추가·수정
-지금 걸려 있는 사이트는 여섯 개이고, **모두 실제 첫 화면 캡처가 미리보기로 들어가 있습니다.**
+지금 걸려 있는 사이트는 여덟 개이고, **모두 실제 첫 화면 캡처가 미리보기로 들어가 있습니다.**
 
 | 이름 | 주소 | 분류 | 미리보기 |
 |---|---|---|---|
+| 헤어청담 | cheongdam.ondoco.workers.dev | 온도 웹 · 미용실 | `images/work/cheongdam.webp` |
 | FEET Lab | feet-inha.ondoco.workers.dev | 온도 웹 · 대학 연구실 | `images/work/feet-lab.webp` |
 | 세이프클린ENG | safeclean.ondoco.workers.dev | 온도 웹 · 시공/설비 | `images/work/safeclean.webp` |
 | 개묘한여행 | gaemyo-travel.vercel.app | 온도 웹 · 개인 브랜딩 | `images/work/gaemyo.webp` |
 | 커리어전략연구소 | career-lab.ondoco.workers.dev | 온도 웹 · 전문가 브랜딩 | `images/work/career-lab.webp` |
+| CLEANSHEET | cleansheet-omega.vercel.app | 온도 AI · 결과물 | `images/work/cleansheet.webp` |
 | 지글의 주린이 가이드 | ziggle-stock.vercel.app | 온도 AI · 결과물 | `images/work/ziggle-stock.webp` |
 | 지글의 그물망 매매법 | ziggle-3x.vercel.app | 온도 AI · 결과물 | `images/work/ziggle-3x.webp` |
 
@@ -121,9 +123,9 @@ git push -u origin main
 
 | 페이지 | 보이는 것 |
 |---|---|
-| 메인 · 작업물 | 6개 전부 |
-| 온도 웹 | 온도 웹 4개 |
-| 온도 AI | 온도 AI 2개 |
+| 메인 · 작업물 | 8개 전부 |
+| 온도 웹 | 온도 웹 5개 |
+| 온도 AI | 온도 AI 3개 |
 
 한 곳만 고치면 어긋나니 `_tools/_frag.py` 아래쪽 `PORTFOLIO` 목록을 고치고
 생성 스크립트를 다시 돌리는 쪽이 안전합니다.

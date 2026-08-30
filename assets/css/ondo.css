@@ -1261,3 +1261,43 @@ body.t-ai .form input:focus,body.t-ai .form textarea:focus{border-color:var(--ai
 @media (max-width:819px){
   .ftr-links{gap:2px 18px}
 }
+
+/* ══════════════════════════════════════════════════════
+   24. 온도 AI — 결과물 스포트라이트 · 이력서 반영 예시
+   ══════════════════════════════════════════════════════ */
+.feat{
+  margin-top:30px;padding:24px;border-radius:var(--r2);
+  background:var(--paper);border:1px solid var(--line-2);box-shadow:var(--sh1);
+  display:grid;gap:20px;align-items:center;
+}
+.feat-k{
+  display:inline-block;font-family:var(--arch);font-size:12px;font-weight:700;
+  letter-spacing:.08em;color:#fff;background:var(--sv-on);
+  border-radius:var(--rp);padding:4px 11px;margin-bottom:12px;
+}
+.feat h3{font-size:19px;line-height:1.4;margin-bottom:10px}
+.feat p{font-size:14.8px;color:var(--ink-2);line-height:1.85;max-width:62ch}
+.feat .btn{white-space:nowrap;justify-self:start}
+@media (min-width:840px){
+  .feat{grid-template-columns:1fr auto;padding:28px 30px}
+  .feat .btn{justify-self:end}
+}
+
+.rex{margin-top:22px;margin-bottom:26px}
+.rex .faq-a{max-width:none}
+.rex-t{font-size:12.5px;font-weight:700;letter-spacing:.06em;color:var(--sv-on);margin:20px 0 8px}
+.rex-t:first-child{margin-top:0}
+.rex-box{
+  padding:14px 16px;border-radius:var(--r1);background:var(--mist);
+  border:1px solid var(--line);font-size:14px;line-height:1.82;color:var(--ink-2);
+}
+.rex-box b{color:var(--ink);font-weight:700}
+.rex-box ul{margin:9px 0 0;padding:0;list-style:none}
+.rex-box li{position:relative;padding-left:13px;margin-top:5px}
+.rex-box li::before{
+  content:"";position:absolute;left:1px;top:11px;width:4px;height:4px;
+  border-radius:50%;background:var(--ink-3);
+}
+.rex-box + .rex-box{margin-top:9px}
+.rex-q{color:var(--ink);font-weight:700;margin-bottom:5px}
+.rex-foot{margin-top:18px;font-size:13px;color:var(--ink-3);line-height:1.8}
