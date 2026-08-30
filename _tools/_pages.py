@@ -28,7 +28,7 @@ body = """
       <a class="btn btn-line btn-lg" href="pricing/">요금 먼저 보기</a>
     </div>
     <p class="hero-trust ld ld4">
-      <span>5만원부터</span><span>영업일 2~7일</span><span>수정 포함</span><span>배포 주소까지 납품</span>
+      <span>5만원부터</span><span>영업일 2~7일</span><span>수정 포함</span><span>배포 주소까지 납품</span><span>월 유지비 0원</span>
     </p>
       </div>
 
@@ -56,7 +56,7 @@ body = """
           <h2>온도 웹</h2>
           <p class="sc-role">검색에 보이게 · 반응형 홈페이지</p>
           <p class="sc-desc">가게 이름이나 “동네+업종”으로 검색했을 때 나올 자리를 만듭니다. 스마트폰 기준으로 먼저 만듭니다.</p>
-          <ul class="sc-chips"><li>반응형 5~7섹션</li><li>전화 바로걸기</li><li>카톡 문의</li><li>네이버 지도</li><li>갤러리</li></ul>
+          <ul class="sc-chips"><li>월 유지비 0원</li><li>반응형 5~7섹션</li><li>전화 바로걸기</li><li>카톡 문의</li><li>네이버 지도</li></ul>
           <dl class="sc-meta">
             <div><dt>시작 가격</dt><dd>5<small>만원~</small></dd></div>
             <div><dt>제작 기간</dt><dd>3~5<small>일</small></dd></div>
@@ -82,7 +82,7 @@ body = """
           <h2>온도 AI</h2>
           <p class="sc-role">이력서에 보이게 · 취업용 AI 결과물</p>
           <p class="sc-desc">지원 직무에 맞는 AI 결과물을 함께 만들고, 이력서·면접에 어떻게 넣을지까지 정리해 드립니다.</p>
-          <ul class="sc-chips"><li>작동하는 결과물</li><li>배포 주소·소스</li><li>이력서 반영 전략</li><li>면접 예상 질문</li><li>바이브코딩 강의</li></ul>
+          <ul class="sc-chips"><li>주제 기획</li><li>작동하는 결과물</li><li>배포 주소·소스</li><li>이력서 문장·면접 대비</li><li>바이브코딩 강의</li></ul>
           <dl class="sc-meta">
             <div><dt>시작 가격</dt><dd>8<small>만원~</small></dd></div>
             <div><dt>제작 기간</dt><dd>3~7<small>일</small></dd></div>
@@ -122,13 +122,15 @@ body = """
       <p class="eyebrow rv">Service 01</p>
       <h2 class="rv"><span class="en">Ondo Web</span>온도 웹</h2>
       <p class="svc-role rv">검색에 보이게 — 반응형 홈페이지</p>
-      <p class="svc-desc rv">손님이 가게 이름이나 “동네+업종”으로 검색했을 때 나오는 자리를 만듭니다. 전부 스마트폰 화면 기준으로 먼저 설계하고, 태블릿·PC는 그다음입니다. 완성되면 바로 쓸 수 있는 주소로 올려 드리고 소스 전체도 함께 드립니다.</p>
+      <p class="svc-desc rv">손님이 가게 이름이나 “동네+업종”으로 검색했을 때 나오는 자리를 만듭니다. 전부 스마트폰 화면 기준으로 먼저 설계하고, 태블릿·PC는 그다음입니다. 완성되면 바로 쓸 수 있는 주소로 올려 드리고 소스 전체도 함께 드립니다. <b>매달 나가는 호스팅비는 없습니다.</b></p>
       <ul class="svc-list rv">
+        <li><span><b>월 호스팅비 0원</b> — 만들어 드린 주소를 계속 쓰셔도 매달 나가는 돈이 없습니다</span></li>
         <li><span><b>모바일 우선 반응형</b> — 375px 기준으로 만들고 데스크톱까지 대응</span></li>
         <li><span><b>한국형 필수 요소</b> — 전화 바로걸기, 카톡 채널, 네이버 지도, 사업자 정보</span></li>
         <li><span><b>카톡 문의 버튼</b> — 누르면 바로 대화창. 관리할 계정이 늘지 않습니다</span></li>
         <li><span><b>카톡 공유 미리보기</b> — 링크 보냈을 때 제목·설명·이미지가 뜨게</span></li>
       </ul>
+      <p class="plan-was rv">정가 <s>7만원~</s> <em>오픈 기념 할인</em></p>
       <div class="svc-cta rv">
         <span class="svc-price">5만원~<small>3~5일</small></span>
         <a class="btn btn-sv" href="web/">온도 웹 자세히 보기</a>
@@ -152,6 +154,7 @@ body = """
         <li><span><b>시나리오 · 대사부터 씁니다</b> — 만들기 전에 이미지와 대사를 확인받습니다</span></li>
         <li><span><b>자막 · 배경음 · 썸네일</b> — 올릴 수 있는 상태로 드립니다</span></li>
       </ul>
+      <p class="plan-was rv">정가 <s>30초 25만원</s> <em>오픈 기념 할인</em></p>
       <div class="svc-cta rv">
         <span class="svc-price">30초 20만원<small>60초 40만원</small></span>
         <a class="btn btn-sv" href="clip/">온도 클립 자세히 보기</a>
@@ -168,13 +171,14 @@ body = """
       <p class="eyebrow rv">Service 03</p>
       <h2 class="rv"><span class="en">Ondo AI</span>온도 AI</h2>
       <p class="svc-role rv">이력서에 보이게 — 취업용 AI 결과물</p>
-      <p class="svc-desc rv">지원하려는 직무에 맞는 AI 결과물을 실제로 작동하는 형태로 만들어 드립니다. 만든 다음이 더 중요해서, 이력서·자기소개서·면접에 어떻게 넣을지까지 함께 정리합니다. 직접 만들고 싶으신 분께는 제작 방법을 강의로 드립니다.</p>
+      <p class="svc-desc rv">지원하려는 직무에 맞는 AI 결과물을 실제로 작동하는 형태로 만들어 드립니다. 뭘 만들지 모르겠으면 주제를 찾는 것부터 같이 하고, 만든 다음 이력서·자기소개서·면접에 어떻게 넣을지까지 정리합니다. 직접 만들고 싶으신 분께는 제작 방법을 강의로 드립니다.</p>
       <ul class="svc-list rv">
+        <li><span><b>주제 기획</b> — 공고를 보고 만들 것부터 같이 찾습니다</span></li>
         <li><span><b>작동하는 결과물</b> — 배포 주소, 소스, 설명 문서 한 세트</span></li>
-        <li><span><b>이력서 반영 전략</b> — 이력서·자소서에 그대로 옮길 문단까지</span></li>
-        <li><span><b>면접 대비</b> — 예상 질문과 설명 시나리오</span></li>
+        <li><span><b>이력서 문장 · 면접 대비</b> — 어느 구성이든 값에 포함</span></li>
         <li><span><b>바이브코딩 강의</b> — 다음 결과물은 직접 만드실 수 있게</span></li>
       </ul>
+      <p class="plan-was rv">정가 <s>12만원~</s> <em>오픈 기념 할인</em></p>
       <div class="svc-cta rv">
         <span class="svc-price">8만원~<small>3~7일</small></span>
         <a class="btn btn-sv" href="ai/">온도 AI 자세히 보기</a>
